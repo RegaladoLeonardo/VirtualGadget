@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'virtualgadget';
+
+  public linkCss: Element | null;
+
+  constructor() {
+    this.linkCss = document.querySelector('#style-global');
+
+    console.log(this.linkCss?.getAttribute('href'));
+  }
+
 }
