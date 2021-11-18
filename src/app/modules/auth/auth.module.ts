@@ -6,11 +6,16 @@ import { SingupComponent } from './components/singup/singup.component';
 
 
 @NgModule({
+  exports:[
+
+    SinginComponent
+  ],
   declarations: [
     SinginComponent,
     SingupComponent
   ],
   imports: [
+
     CommonModule
   ]
 })
