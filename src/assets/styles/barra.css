@@ -1,0 +1,6 @@
+html{
+    background: url(../img/peakpx.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

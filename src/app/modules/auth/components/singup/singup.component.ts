@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-singup',
   templateUrl: './singup.component.html',
   styleUrls: ['./singup.component.css']
 })
-export class SingupComponent implements OnInit {
+export class SingupComponent implements OnInit{
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }
