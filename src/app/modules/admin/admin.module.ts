@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PrincipalaComponent } from './components/principala/principala.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    PrincipalaComponent
+  ],
   imports: [
     CommonModule
   ]
