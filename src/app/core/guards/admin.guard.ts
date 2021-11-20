@@ -6,27 +6,23 @@ import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanLoad, CanActivate {
+
+export class AdminGuard implements CanLoad, CanActivate {
 
   constructor(
     private router: Router
   ) {}
 
+
   canLoad(
     route: Route
   ): Observable<boolean> | Promise<boolean> | boolean {
-    /*
-      Logica
-      Si esta logeado
-    */
-      //this.router.navigateByUrl('/auth/login');
-    return true;
+
+
+
+     return true;
   }
-
-
-
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     return true;
   }
-
 }

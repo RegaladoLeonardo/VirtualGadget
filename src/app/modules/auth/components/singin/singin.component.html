@@ -1,24 +1,68 @@
 
 
 
-
+<!--
 
 <div class="fondo">
   <div class="login-page">
     <div class="form">
-      <form class="register-form">
-        <input type="text" placeholder="name"/>
-        <input type="password" placeholder="password"/>
-        <input type="text" placeholder="email address"/>
-        <button>create</button>
-        <p class="message">Already registered? <a href="#">Sign In</a></p>
-      </form>
-      <form class="login-form">
-        <input type="text" placeholder="username"/>
-        <input type="password" placeholder="password"/>
-        <button>Entrar</button>
+      <form (ngSubmit)="onSubmit()" [formGroup]="form" class="login-form">
+        <input formControlName="username" type="text" placeholder="username"/>
+        <input formControlName="password" type="password" placeholder="password"/>
+        <button class="spectre" type="submit"> Entrar </button>
         <p class="message">¿Aun no estas registrado? <a href="#">!Crear cuenta!</a></p>
       </form>
+    </div>
+  </div>
+</div>
+
+-->
+
+<div class="container">
+  <div class="form">
+    <div class="contact-info">
+      <h3 class="title">¡¡¡Momento de iniciar!!!</h3>
+      <p class="text">
+        Es el momento, ingresa tu usuario y contraseña
+        y comienza una nueva forma de vida
+      </p>
+
+      <div class="info">
+        <div class="information">
+          <p>¿No tienes cuenta?,</p><a href="/auth/singup" class="registro"><span>Registrate aqui</span></a>
+        </div>
+      </div>
+
+      <div class="social-media">
+        <p>Contactanos</p>
+        <div class="social-icons">
+          <a href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <span class="circle one"></span>
+      <span class="circle two"></span>
+
+      <section class="form-login">
+        <h5>Iniciar Sesión</h5>
+        <input class="controls" type="text" name="usuario" value="" placeholder="Usuario">
+        <input class="controls" type="password" name="pass" value="" placeholder="Contraseña">
+        <a href=".#"  routerLink="/alumno/inicio" ><input class="buttons" type="submit" name="" value="Ingresar Alumno"></a>
+        <a href="#"  routerLink="/profesor/inicioP"><input class="buttons" type="submit" name="" value="Ingresar Profesor"></a>
+      </section>
     </div>
   </div>
 </div>
