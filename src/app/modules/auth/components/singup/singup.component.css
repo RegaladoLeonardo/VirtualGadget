@@ -21,7 +21,7 @@ h3{
 }
 
 .registro{
-  color: rgb(109, 98, 5);
+  color: rgb(5, 41, 109);
 }
 
 .container {
@@ -36,7 +36,7 @@ h3{
 }
 
 .form {
-  border-top: 5px solid #c8bd17;
+  border-top: 5px solid #175bc8;
   width: 100%;
   max-width: 820px;
   height: 550px;
@@ -50,13 +50,13 @@ h3{
 }
 
 .contact-form {
-  background-color: #574e10;
+  background-color: #102657;
   position: relative;
 }
 
 .circle {
   border-radius: 50%;
-  background: linear-gradient(135deg, transparent 20%, #969038);
+  background: linear-gradient(135deg, transparent 20%, #294c99);
   position: absolute;
 }
 
@@ -81,7 +81,7 @@ h3{
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color: #574e10;
+  background-color: #102657;
   transform: rotate(45deg);
   top: 50px;
   left: -13px;
@@ -100,7 +100,7 @@ form {
 }
 
 .contact-info .title {
-  color: rgb(109, 98, 5);
+    color: rgb(5, 41, 109);
 }
 
 .text {
@@ -156,7 +156,7 @@ form {
   position: absolute;
   width: 110px;
   height: 100px;
-  border: 22px solid #504318;
+  border: 22px solid #182950;
   border-radius: 50%;
   bottom: -77px;
   right: 50px;
@@ -214,10 +214,10 @@ form {
 
 .controls {
   width: 90%;
-  border: 1px solid rgb(63, 57, 10);
+  border: 1px solid rgb(10, 30, 63);
   margin-bottom: 15px;
   padding: 11px 10px;
-  background: #2b2817;
+  background: #171e2b;
   font-size: 14px;
   font-weight: bold;
   color: white;
@@ -227,7 +227,7 @@ form {
   cursor: pointer;
   width: 100%;
   height: 40px;
-  background: rgb(63, 57, 10);
+  background: rgb(10, 29, 63);
   border: none;
   color: white;
   margin-bottom: 16px;
@@ -235,7 +235,7 @@ form {
 .buttons:hover{
   animation: shadow-pulsef 1200ms 1;
   transition: all 700ms ease;
-  background: rgb(75, 67, 12);
+  background: rgb(12, 36, 75);
 }
 
 .form-login p {
@@ -342,19 +342,3 @@ form,
 }
 
 
-@keyframes shadow-pulsef {
-  0%{
-      box-shadow: 0 0 0 0 #e2be20c7;
-  }
-  100%{
-      box-shadow: 0 0 16px 24px rgba(57, 132, 182, 0);
-  }
-}
-@keyframes cambioc{
-  0%{
-      background:rgba(4, 7, 15, 0);
-  }
-  100%{
-      background: rgba(38, 50, 83, 0);
-  }
-}

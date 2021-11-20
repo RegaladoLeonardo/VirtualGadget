@@ -1,5 +1,5 @@
 html{
-    background: url(../img/peakpx.jpg);
+    background-image: linear-gradient(to top, rgb(16, 30, 68), rgb(29, 49, 114));
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
