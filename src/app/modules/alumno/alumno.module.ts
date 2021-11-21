@@ -5,7 +5,7 @@ import { PrincipalComponent } from './components/principal/principal.component';
 import { AuthModule } from '../auth/auth.module';
 import { TutorialComponent } from './components/tutorial/tutorial.component';
 import { NavbarAComponent } from './components/navbar-a/navbar-a.component';
-
+import { MaterialModule } from '../../material.module';
 
 @NgModule({
 
@@ -17,7 +17,8 @@ import { NavbarAComponent } from './components/navbar-a/navbar-a.component';
   imports: [
     AuthModule,
     CommonModule,
-    RouterModule
+    RouterModule,
+    MaterialModule
   ]
 })
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import {MatStepperModule} from '@angular/material/stepper';
 
+import {MatStepperModule} from '@angular/material/stepper';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 @Component({
   selector: 'app-tutorial',
   templateUrl: './tutorial.component.html',
@@ -9,14 +9,25 @@ import {MatStepperModule} from '@angular/material/stepper';
 })
 export class TutorialComponent implements OnInit {
 
+  isLinear = false;
+  firstFormGroup?: FormGroup;
+  secondFormGroup?: FormGroup;
   public linkCss: Element | null;
 
-  constructor() {
+  constructor(private _formBuilder: FormBuilder) {
     this.linkCss = document.querySelector('#style-global');
     this.linkCss?.setAttribute('href', './assets/styles/home.css');
+
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required],
+    });
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required],
+    });
   }
+
 
 }
