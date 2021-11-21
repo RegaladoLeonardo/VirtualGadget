@@ -4,13 +4,15 @@ import { RouterModule } from '@angular/router';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { AuthModule } from '../auth/auth.module';
 import { TutorialComponent } from './components/tutorial/tutorial.component';
+import { NavbarAComponent } from './components/navbar-a/navbar-a.component';
 
 
 @NgModule({
 
   declarations: [
     PrincipalComponent,
-    TutorialComponent
+    TutorialComponent,
+    NavbarAComponent
   ],
   imports: [
     AuthModule,

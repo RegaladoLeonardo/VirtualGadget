@@ -7,6 +7,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { HomeModule } from './modules/home/home.module';
 import { AlumnoModule } from './modules/alumno/alumno.module';
 import { AdminModule } from './modules/admin/admin.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AdminModule } from './modules/admin/admin.module';
     AuthModule,
     HomeModule,
     AlumnoModule,
-    AdminModule
+    AdminModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
