@@ -12,4 +12,12 @@ export class AdminnavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public wrapp = (): any => document.querySelector('#wrapper')?.classList.toggle('toggled');
+
+
+    public logout = (): void => {
+      console.log("hola")
+    }
+
+
 }

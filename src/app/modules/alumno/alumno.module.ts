@@ -7,13 +7,15 @@ import { TutorialComponent } from './components/tutorial/tutorial.component';
 import { NavbarAComponent } from './components/navbar-a/navbar-a.component';
 import { MaterialModule } from '../../material.module';
 import { ComponentsModule } from '../../shared/components/components.module';
+import { PerfilalumnoComponent } from './components/perfilalumno/perfilalumno.component';
 
 @NgModule({
 
   declarations: [
     PrincipalComponent,
     TutorialComponent,
-    NavbarAComponent
+    NavbarAComponent,
+    PerfilalumnoComponent
   ],
   imports: [
     AuthModule,
