@@ -6,6 +6,7 @@ import { AuthModule } from '../auth/auth.module';
 import { TutorialComponent } from './components/tutorial/tutorial.component';
 import { NavbarAComponent } from './components/navbar-a/navbar-a.component';
 import { MaterialModule } from '../../material.module';
+import { ComponentsModule } from '../../shared/components/components.module';
 
 @NgModule({
 
@@ -18,8 +19,10 @@ import { MaterialModule } from '../../material.module';
     AuthModule,
     CommonModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    ComponentsModule
   ]
 })
+
 
 export class AlumnoModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 
 import {MatStepperModule} from '@angular/material/stepper';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
@@ -12,11 +13,13 @@ export class TutorialComponent implements OnInit {
   isLinear = false;
   firstFormGroup?: FormGroup;
   secondFormGroup?: FormGroup;
-  public linkCss: Element | null;
+  event: any;
+  items = ['Carrots', 'Tomatoes'];
+
+  basket = ['Oranges'];
+
 
   constructor(private _formBuilder: FormBuilder) {
-    this.linkCss = document.querySelector('#style-global');
-    this.linkCss?.setAttribute('href', './assets/styles/home.css');
 
   }
 
@@ -27,6 +30,21 @@ export class TutorialComponent implements OnInit {
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required],
     });
+  }
+
+
+
+  drop(event: CdkDragDrop<string[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      );
+    }
   }
 
 

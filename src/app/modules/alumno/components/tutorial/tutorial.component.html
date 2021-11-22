@@ -1,27 +1,20 @@
-<p>tutorial works!</p>
-<app-navbar-a></app-navbar-a>
+<div class="d-flex" id="wrapper">
+  <app-alumnosidebar></app-alumnosidebar>
+  <!-- Page Content -->
 
-<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-</button>
-<mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
-    <button mat-button matStepperNext>Next</button>
-  </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup">
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
+  <div #wrapper id="page-content-wrapper">
+    <app-alumnonavbar></app-alumnonavbar>
+
+    <p align="center">TUTORIAL NUMERO 1</p>
+    <div class="container-fluid content-wrapper">
     </div>
-  </mat-step>
-</mat-stepper>
+
+    <!--
+      <app-footer></app-footer>
+    -->
+  </div>
+
+
+
+  <!-- /#page-content-wrapper -->
+</div>
