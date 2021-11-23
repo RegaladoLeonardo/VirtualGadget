@@ -4,6 +4,7 @@ import { PrincipalpComponent } from './components/principalp/principalp.componen
 import { RouterModule } from '@angular/router';
 import { AuthModule } from '../auth/auth.module';
 import { ComponentsModule } from '../../shared/components/components.module';
+import { MaterialModule } from 'src/app/material.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ComponentsModule } from '../../shared/components/components.module';
     AuthModule,
     CommonModule,
     RouterModule,
-    ComponentsModule
+    ComponentsModule,
+    MaterialModule
   ]
 })
 export class ProfesorModule { }

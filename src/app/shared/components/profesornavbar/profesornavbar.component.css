@@ -7,13 +7,15 @@ a{
   color: white !important;
 }
 
-#barra{
+
+.navbar{
   width: 100%;
 }
 
+
 nav{
   background-color: #3e038b !important;
-  width: 100% !important;
+
 }
 
 

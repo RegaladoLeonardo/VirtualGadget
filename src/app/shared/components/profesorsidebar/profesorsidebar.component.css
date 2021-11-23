@@ -13,16 +13,18 @@
 
 #sidebar-wrapper{
 
-  border-right: black !important;
   width: 250px;
+  border-right: black !important;
+
 }
 
 
 a{
   background-color: white !important;
   color: #39393a;
-  font-weight: 44px;
+  font-weight: 60px;
   font-size:25px;
+  width: 250px;
 }
 
 a:hover{
