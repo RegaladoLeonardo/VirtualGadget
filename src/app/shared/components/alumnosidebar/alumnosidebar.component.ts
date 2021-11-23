@@ -8,6 +8,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 export class AlumnosidebarComponent implements OnInit {
 
 
+  nombre: string= 'VirtualGadget';
+  url: string = 'https://chats-virtualgadget.herokuapp.com/catch'+'?nombre='+this.nombre;
+
   constructor() { }
 
   ngOnInit(): void {

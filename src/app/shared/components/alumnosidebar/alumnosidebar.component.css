@@ -20,6 +20,7 @@ a{
   color: #39393a;
   font-weight: 44px;
   font-size:25px;
+  width: 250px !important;
 }
 
 a:hover{
