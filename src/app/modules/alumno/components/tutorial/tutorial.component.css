@@ -40,6 +40,7 @@
   font-size: 14px;
 }
 
+
 .example-box1 {
   padding: 20px 10px;
   border-bottom: solid 1px #ccc;
@@ -51,8 +52,7 @@
   box-sizing: border-box;
   cursor: move;
   height: 78px;
-  background-image:  url('../../../../../assets/img/t1-1.png');
-  backdrop-filter: blur(5px);
+  background-image: white;
   font-size: 14px;
 }
 .cdk-drag-preview {

@@ -13,9 +13,9 @@ export class TutorialComponent implements OnInit {
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
 
-  items = [''];
+  items: any = [''];
 
-  basket = [''];
+  basket: any = [];
 
 
   constructor(private _formBuilder: FormBuilder) {
