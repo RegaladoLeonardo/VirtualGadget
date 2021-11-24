@@ -1,0 +1,109 @@
+
+*{
+    text-decoration: none;
+}
+
+header{
+    position: fixed;
+    top:0; left:0;
+    width: 100%;
+    background-image: linear-gradient(to right, #1847ac, #61229c);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
+    padding: 20px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    animation: slideInDown;
+    animation-duration: 0.5s;
+    transition: all 500ms ease;
+}
+  
+  header .logo{
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(90, 128, 211);
+}
+  header .logo span{
+    font-weight: 700;
+    color: rgb(231, 231, 231);
+}
+  header .navbar a{
+    font-weight: bolder;
+    font-size: 1rem;
+    margin-left: 2rem;
+    color: rgb(255, 255, 255);
+}
+  header .navbar .spectre{
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    font-weight: 700;
+    color: rgb(174, 173, 253);
+}
+  header .navbar a:hover{
+    color: rgb(90, 128, 211);
+}
+  header .navbar .spectre:hover{
+    color:rgb(255, 255, 255);
+}
+  header input{
+    display: none;
+}
+  header label{
+    font-size: 3rem;
+    color: var(--bluel);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    text-align: center;
+    background: #edf0f2;
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.container h1{
+    font-size: 3.2rem;
+    color: #1847ac;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+.contenedor{
+    margin: 60px;
+    text-align: justify;
+}
+.contenedor h2{
+    color: #61229c;
+    font-size: 24px;
+}
+.contenedor .welcome{
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+}
+.tema{
+    margin-top: 20px;
+    font-size: 24px;
+    color: #7847a7;
+}
+.lista{
+    list-style: none;
+}
+li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.subtema{
+    margin-top: 10px;
+    font-size: 18px;
+}
