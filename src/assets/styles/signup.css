@@ -1,11 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    /* background-image: linear-gradient(to top, rgb(63, 28, 144), rgb(196, 159, 255)); */
-    background: url(../img/green-low-poly-abstract-background-free-vector.jpg);
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh;
-    background-attachment: fixed;
+html{
+    background-color: rgb(211, 211, 211);
 }

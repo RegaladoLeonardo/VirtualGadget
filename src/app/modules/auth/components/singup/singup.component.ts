@@ -1,3 +1,9 @@
+
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Subscription } from 'rxjs';
+import { Store } from 'src/app/core/store/store';
+
+
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
@@ -5,16 +11,34 @@ import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit } from '@angula
   templateUrl: './singup.component.html',
   styleUrls: ['./singup.component.css']
 })
-export class SingupComponent implements OnDestroy{
-  public linkCss: Element | null;
+export class SingupComponent {
 
-  constructor() {
+  public linkCss: Element | null;
+  //no es necesario ve
+  public storeSub: Subscription;
+  public state: any;
+  public form!: FormGroup;
+
+  constructor(
+    private fb: FormBuilder,
+    private store: Store
+
+  ) {
     this.linkCss = document.querySelector('#style-global');
     this.linkCss?.setAttribute('href', './assets/styles/signup.css');
+    this.makeForm();
+    this.storeSub = this.store.getObservable.subscribe((store) => {
+      this.state = store;
+  })
   }
 
-  ngOnDestroy(): void {
-    this.linkCss?.setAttribute('href', './assets/styles/default.css');
-    console.log('Soy el ondestroy');
+
+  public makeForm(): void {
+    this.form = this.fb.group({
+      username: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required)
+    })
   }
+
+
 }

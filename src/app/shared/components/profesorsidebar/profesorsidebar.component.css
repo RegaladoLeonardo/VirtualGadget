@@ -1,0 +1,37 @@
+
+
+.act{
+  color: #7128b6;
+  background-color: white !important;
+}
+
+.white{
+  background-color: white !important;
+}
+
+
+
+#sidebar-wrapper{
+
+  width: 250px;
+  border-right: black !important;
+
+}
+
+
+a{
+  background-color: white !important;
+  color: #39393a;
+  font-weight: 60px;
+  font-size:25px;
+  width: 250px;
+}
+
+a:hover{
+  background-color: white !important;
+  color: #6d20c5;
+}
+
+a:focus{
+  background-color: white !important;
+}

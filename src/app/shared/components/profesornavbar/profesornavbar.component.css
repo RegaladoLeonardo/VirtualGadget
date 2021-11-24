@@ -1,0 +1,28 @@
+
+.nav-link{
+  cursor: pointer;
+}
+
+a{
+  color: white !important;
+}
+
+
+.navbar{
+  width: 100%;
+}
+
+
+nav{
+  background-color: #3e038b !important;
+
+}
+
+
+button{
+  border: 1px solid white !important;
+}
+
+.white{
+  color: white;
+}
