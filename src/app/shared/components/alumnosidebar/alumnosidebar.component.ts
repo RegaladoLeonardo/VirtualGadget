@@ -9,7 +9,9 @@ export class AlumnosidebarComponent implements OnInit {
 
 
   nombre: string= 'VirtualGadget';
-  url: string = 'https://chats-virtualgadget.herokuapp.com/catch'+'?nombre='+this.nombre;
+  //se tiene que imprimir nombre
+
+  url: string = 'https://chats-virtualgadget.herokuapp.com/catch'+'?name='+this.nombre;
 
   constructor() { }
 

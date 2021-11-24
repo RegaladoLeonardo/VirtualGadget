@@ -10,13 +10,12 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class TutorialComponent implements OnInit {
 
-  isLinear = false;
-  firstFormGroup?: FormGroup;
-  secondFormGroup?: FormGroup;
-  event: any;
-  items = ['Carrots', 'Tomatoes'];
+  firstFormGroup!: FormGroup;
+  secondFormGroup!: FormGroup;
 
-  basket = ['Oranges'];
+  items = [''];
+
+  basket = [''];
 
 
   constructor(private _formBuilder: FormBuilder) {
@@ -46,6 +45,7 @@ export class TutorialComponent implements OnInit {
       );
     }
   }
+  }
 
 
-}
+

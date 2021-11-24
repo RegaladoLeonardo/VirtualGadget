@@ -5,6 +5,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatStepperModule } from '@angular/material/stepper';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [],
@@ -14,7 +15,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatSliderModule,
     MatStepperModule,
     DragDropModule,
-    MatSidenavModule
+    MatSidenavModule,
+    ReactiveFormsModule
     //mat-drawer-content
 
   ],
@@ -24,7 +26,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatSliderModule,
     MatStepperModule,
     DragDropModule,
-    MatSidenavModule
+    MatSidenavModule,
+    ReactiveFormsModule
   ]
 })
 export class MaterialModule { }
