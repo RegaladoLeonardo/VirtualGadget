@@ -1,45 +1,47 @@
 
-<script src="https://kit.fontawesome.com/a78d4ea77b.js" crossorigin="anonymous"></script>
 
-<div class="container">
-  <div class="form">
-    <div class="contact-info">
-      <h2 class="title">Registro</h2>
-      <h3 class="title">¡¡¡Momento de iniciar!!!</h3>
-      <p class="text">
-         Crea una cuenta para acceder a los privilegios de
-         Spectre trae para tí o si lo prefieres
-         tambien puedes conectar una cuenta con google con
-         nosotros
-      </p>
-
-      <div class="info">
-        <div class="information">
-          <p>Accede a nuestras :</p><a class="registro" routerLink="/auth/politics" > Politicas de privacidad y uso</a>
-        </div>
+<app-nabvarp></app-nabvarp>
+<section>
+  <div class="color"></div>
+  <div class="color"></div>
+  <div class="color"></div>
+  <div class="box">
+    <div class="square" style="--i:0"></div>
+    <div class="square" style="--i:1"></div>
+    <div class="square" style="--i:2"></div>
+    <div class="square" style="--i:3"></div>
+    <div class="square" style="--i:4"></div>
+    <div class="container">
+      <div class="form">
+        <h2>Registro</h2>
+        <form action="#">
+          <div class="inputBox">
+            <input type="text" placeholder="Usuario">
+          </div>
+          <div class="inputBox">
+            <input type="password" placeholder="Contraseña">
+          </div>
+          <div class="inputBox">
+            <input type="text" placeholder="Nombre">
+          </div>
+          <div class="inputBox">
+            <input type="text" placeholder="Apellido Paterno">
+          </div>
+          <div class="inputBox">
+            <input type="text" placeholder="Apellido Materno">
+          </div>
+          <div class="inputBox">
+            <input type="email" placeholder="Email">
+          </div>
+          <div class="inputBox">
+            <input type="checkbox">Acepto politicas de Privacidad
+          </div>
+          <p class="forget">Conoce nuestras <a href="/auth/politics">Politicas de Privacidad</a></p>
+          <div class="inputBox">
+            <input type="submit" value="Registrar">
+          </div>
+        </form>
       </div>
     </div>
-
-    <div class="contact-form">
-      <span class="circle one"></span>
-      <span class="circle two"></span>
-
-      <section class="form-login">
-          <input class="controls" type="text" name="usuario" value="" placeholder="Usuario" required>
-          <input class="controls" type="text" name="pass" value="" placeholder="Contraseña" required>
-          <input class="controls" type="text" name="app" value="" placeholder="Nombre" required>
-          <input class="controls" type="text" name="app" value="" placeholder="Apellido paterno" required>
-          <input class="controls" type="text" name="apm" value="" placeholder="Apellido materno" required>
-          <input class="controls" type="email" name="email" value="" placeholder="Correo Electronico" required>
-          <input class="check" type="checkbox" name="ter" required> Acepto Politicas de privacidad
-          <a href="" routerLink="/auth/login" ><input class="buttons"  type="submit" name="" value="Registrar"></a>
-          <a href=""><input class="buttons" type="submit" name="" value="Registrar con google"></a>
-          <a class=""  routerLink="/auth/login">Cancelar</a>
-        </section>
-    </div>
   </div>
-
-  <div>
-
-    <div>
-</div>
+</section>

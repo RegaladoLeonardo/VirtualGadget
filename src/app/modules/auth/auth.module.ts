@@ -5,6 +5,7 @@ import { SingupComponent } from './components/singup/singup.component';
 import { PoliticasComponent } from './components/politicas/politicas.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ComponentsModule } from '../../shared/components/components.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     RouterModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ComponentsModule
   ]
 })
 export class AuthModule { }

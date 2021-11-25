@@ -1,3 +1,5 @@
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
 <div class="d-flex" id="wrapper">
   <app-alumnosidebar></app-alumnosidebar>
   <!-- Page Content -->
@@ -5,79 +7,39 @@
   <div #wrapper id="page-content-wrapper">
     <app-alumnonavbar></app-alumnonavbar>
 
-    <h2 align="center">TUTORIAL NUMERO 1</h2>
+    <h1 align="center"> Esta es la lista de tutoriales disponibles</h1>
 
-    <p align="center">Empecemos a implemtar los diagramas pero ahora con un proceso cotidiano para el sector economico y otros</p>
+    <br>
+    <div class="container" align="center" >
 
 
-    <mat-stepper orientation="vertical"  #stepper>
-      <mat-step [stepControl]="firstFormGroup">
-        <form [formGroup]="firstFormGroup">
-          <ng-template matStepLabel>Fill out your name</ng-template>
-          <h2 align="center">Coloca la imagen en el campo</h2>
-          <!-- contenido del paso -->
-          <div cdkDropListGroup>
-            <div class="example-container">
-
-              <div
-                cdkDropList
-                [cdkDropListData]="items"
-                class="example-list"
-                cdkDropListSortingDisabled
-                (cdkDropListDropped)="drop($event)"
-                >
-                <!--img="../../../../../assets/img/t1-1.png"-->
-                  <div class="example-box" *ngFor="let item of items" cdkDrag></div>
-                </div>
-            </div>
-
-            <div class="example-container">
-              <p>hola</p>
-              <div
-                cdkDropList
-                [cdkDropListData]="basket"
-                class="example-list"
-                (cdkDropListDropped)="drop($event)">
-
-                <div class="example-box" *ngFor="let item of basket" cdkDrag></div>
-              </div>
-            </div>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Tutorial 1</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Nive: Principiante</h6>
+            <p class="card-text">Un proceso de nuestro entorno sencillo </p>
+            <a routerLink="/alumno/tuto1" class="btn btn-primary ">Entrar</a>
           </div>
-          <!-- termino del paso-->
-          <div>
-            <button mat-button matStepperNext>Next</button>
-          </div>
-        </form>
-      </mat-step>
-      <mat-step [stepControl]="secondFormGroup">
-        <form [formGroup]="secondFormGroup">
-          <ng-template matStepLabel>Fill out your address</ng-template>
-
-          <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
-          </div>
-        </form>
-      </mat-step>
-      <mat-step>
-        <ng-template matStepLabel>Done</ng-template>
-        <p>You are now done.</p>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button (click)="stepper.reset()">Reset</button>
         </div>
-      </mat-step>
-    </mat-stepper>
 
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"> Tutorial 2</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Nive: Basico</h6>
+            <p class="card-text">Empezamos a usar algoritmos numericos</p>
+            <a routerLink="/alumno/tuto2" class="btn btn-primary">Entrar</a>
+          </div>
+        </div>
 
-
+      </div>
 
     <div class="container-fluid content-wrapper">
 
 
     </div>
+    <br>
+    <br>
 
-fuera de la equitea por el footer
 
     <!--
 

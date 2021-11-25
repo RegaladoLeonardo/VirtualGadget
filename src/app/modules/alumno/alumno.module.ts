@@ -8,6 +8,8 @@ import { NavbarAComponent } from './components/navbar-a/navbar-a.component';
 import { MaterialModule } from '../../material.module';
 import { ComponentsModule } from '../../shared/components/components.module';
 import { PerfilalumnoComponent } from './components/perfilalumno/perfilalumno.component';
+import { FtutorialComponent } from './components/ftutorial/ftutorial.component';
+import { StutorialComponent } from './components/stutorial/stutorial.component';
 
 @NgModule({
 
@@ -15,7 +17,9 @@ import { PerfilalumnoComponent } from './components/perfilalumno/perfilalumno.co
     PrincipalComponent,
     TutorialComponent,
     NavbarAComponent,
-    PerfilalumnoComponent
+    PerfilalumnoComponent,
+    FtutorialComponent,
+    StutorialComponent
   ],
   imports: [
     AuthModule,

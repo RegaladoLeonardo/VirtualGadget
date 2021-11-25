@@ -1,0 +1,107 @@
+<div class="d-flex" id="wrapper">
+  <app-alumnosidebar></app-alumnosidebar>
+  <!-- Page Content -->
+
+  <div #wrapper id="page-content-wrapper">
+    <app-alumnonavbar></app-alumnonavbar>
+
+    <h2 align="center">TUTORIAL  2</h2>
+
+    <p align="center">Ahora vamos a implementar algunas operaciones y sentencias nunmericas a nuestro diagrama</p>
+
+
+    <mat-stepper orientation="vertical"  #stepper>
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel><h2>Dato de entrada</h2></ng-template>
+          <p align="center">Coloca la imagen en el campo</p>
+          <!-- contenido del paso -->
+          <div cdkDropListGroup>
+            <div class="example-container">
+
+              <div
+                cdkDropList
+                [cdkDropListData]="items"
+                class="example-list"
+                cdkDropListSortingDisabled
+                (cdkDropListDropped)="drop($event)"
+                >
+                <!--img="../../../../../assets/img/t1-1.png"-->
+                  <div class="example-box" *ngFor="let item of items" cdkDrag></div>
+                </div>
+            </div>
+
+            <div class="example-container">
+
+              <img src="../../../../../assets/img/t1-2.png">
+
+              <div class="cont">
+
+
+                <div
+                cdkDropList
+                [cdkDropListData]="basket"
+                class="example-list"
+                (cdkDropListDropped)="drop($event)">
+
+                <div class="example-box" *ngFor="let item of basket" cdkDrag ></div>
+              </div>
+              <img class="img1" src="../../../../../assets/img/t1-1-2.png" >
+              <img class="img2" src="../../../../../assets/img/t1-1-1.png" >
+
+              </div>
+
+            </div>
+          </div>
+          <!-- termino del paso-->
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Fill out your address</ng-template>
+
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </mat-step>
+    </mat-stepper>
+
+    <a align="center" routerLink="/alumno/tutorial" class="btn btn-primary">Terminar</a>
+
+
+    <div class="container-fluid content-wrapper">
+
+
+    </div>
+
+
+
+    <!--
+
+
+      <app-footer></app-footer>
+    -->
+  </div>
+
+
+
+  <!-- /#page-content-wrapper -->
+</div>
+
+
+
+
