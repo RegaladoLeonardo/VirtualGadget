@@ -1,21 +1,29 @@
-
+.navbar-collapse{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 10px;
+}
 .nav-link{
   cursor: pointer;
 }
 
 a{
   color: white !important;
+  margin-right: 10px;
 }
 
-
-.navbar{
+#barra{
   width: 100%;
 }
 
-
 nav{
-  background-color: #3e038b !important;
-
+  background-color: rgb(34, 21, 65) !important;
+  width: 100% !important;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 

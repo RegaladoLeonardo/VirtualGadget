@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PrincipalaComponent } from './components/principala/principala.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
+import { ComponentsModule } from '../../shared/components/components.module';
 
 
 
 @NgModule({
   declarations: [
     PrincipalaComponent,
-    NavbarComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ComponentsModule
   ]
 })
 export class AdminModule { }

@@ -1,10 +1,16 @@
-
+.navbar-collapse{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 10px;
+}
 .nav-link{
   cursor: pointer;
 }
 
 a{
   color: white !important;
+  margin-right: 10px;
 }
 
 #barra{
@@ -12,8 +18,12 @@ a{
 }
 
 nav{
-  background-color: #3e038b !important;
+  background-color: #071635 !important;
   width: 100% !important;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 

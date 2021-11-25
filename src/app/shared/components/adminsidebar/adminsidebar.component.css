@@ -1,35 +1,65 @@
+.sidebar-heading h3{
+  font-size: 2rem;
+  margin-top: 50px;
+  color: white;
+  padding-left: 10px;
+}
+.sidebar-heading h2{
+  color: #ffffff;
+  text-align: left;
+  padding-left: 10px;
+}
 
-
+.head{
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.head img{
+  margin: 5px;
+  margin-left: 5px;
+  border-radius: 100px;
+  border: solid black 2px;
+}
+.head .online{
+  color: #ffffff;
+  font-size: 1rem;
+}
 .act{
-  color: #7128b6;
-  background-color: white !important;
+  background-color: #0b2653 !important;
 }
 
 .white{
-  background-color: white !important;
+  background-color: #0b2653 !important;
 }
-
-
-
 #sidebar-wrapper{
-
-  border-right: black !important;
   width: 250px;
+  border-right: black !important;
 }
-
+.list-group-flush{
+  background-color: #16315f!important;
+  max-width: 250px;
+  margin-top: 50px;
+}
+.list-group-item{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 
 a{
-  background-color: white !important;
-  color: #39393a;
+  background-color: #16315f !important;
+  color: #ffffff;
+  width: 250px;
   font-weight: 44px;
-  font-size:25px;
+  font-size:21px;
 }
 
 a:hover{
-  background-color: white !important;
-  color: #6d20c5;
+  color: rgb(174, 198, 255) ;
 }
 
 a:focus{
-  background-color: white !important;
+  background-color: rgb(174, 202, 255) !important;
 }

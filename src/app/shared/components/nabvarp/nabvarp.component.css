@@ -1,5 +1,6 @@
-
-
+*{
+  text-decoration: none;
+}
 
 header{
   position: fixed;
@@ -7,7 +8,7 @@ header{
   width: 100%;
   background: rgb(4, 19, 52);
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
-  padding: 1.5rem 9%;
+  padding: 1rem 9%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,21 +21,21 @@ header{
 header .logo{
   font-weight: 600;
   font-size: 24px;
-  color: var(--bluel);
+  color: rgb(64, 134, 226);
 }
 header .logo span{
   color: rgb(231, 231, 231);
 }
 header .navbar a{
   font-weight: bolder;
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin-left: 2rem;
   color: rgb(255, 255, 255);
 }
 header .navbar .spectre{
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin-left: 2rem;
-  color: rgb(202, 154, 99);
+  color: rgb(96, 165, 255);
 }
 header .navbar a:hover{
   color: var(--bluel);

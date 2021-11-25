@@ -1,0 +1,9 @@
+
+.chat {
+  width: 1000px !important;
+  height: 600px !important;
+}
+
+iframe html {
+  background-color: yellow !important;
+}

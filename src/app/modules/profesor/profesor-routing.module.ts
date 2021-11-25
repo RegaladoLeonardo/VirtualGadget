@@ -4,9 +4,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthModule } from '../auth/auth.module';
 import { SinginComponent } from '../auth/components/singin/singin.component';
 import { PrincipalpComponent } from './components/principalp/principalp.component';
+import { ChatfComponent } from './components/chatf/chatf.component';
+import { PerfilpComponent } from './components/perfilp/perfilp.component';
+
 
 const iniciopRoutes: Routes = [
-  { path: 'inicioP', component: PrincipalpComponent, pathMatch: 'full' }
+  { path: 'inicioP', component: PrincipalpComponent, pathMatch: 'full' },
+  { path: 'chatF', component: ChatfComponent, pathMatch: 'full' },
+  { path: 'perfilP', component: PerfilpComponent , pathMatch: 'full' }
+
 ];
 
 @NgModule({

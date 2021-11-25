@@ -31,3 +31,12 @@ body{
   background-attachment: fixed;
   background-size: 100%
 }
+
+.chat {
+  width: 100% !important;
+  height: 90% !important;
+}
+
+iframe html {
+  background-color: yellow !important;
+}

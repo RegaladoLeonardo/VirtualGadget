@@ -5,18 +5,23 @@ import { RouterModule } from '@angular/router';
 import { AuthModule } from '../auth/auth.module';
 import { ComponentsModule } from '../../shared/components/components.module';
 import { MaterialModule } from 'src/app/material.module';
+import { ChatfComponent } from './components/chatf/chatf.component';
+import { PerfilpComponent } from './components/perfilp/perfilp.component';
 
 
 @NgModule({
   declarations: [
-    PrincipalpComponent
-  ],
+    PrincipalpComponent,
+    ChatfComponent,
+    PerfilpComponent
+    ],
   imports: [
     AuthModule,
     CommonModule,
     RouterModule,
     ComponentsModule,
     MaterialModule
+
   ]
 })
 export class ProfesorModule { }

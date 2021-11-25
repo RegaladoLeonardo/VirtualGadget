@@ -2,9 +2,10 @@
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { Store } from 'src/app/core/store/store';
-
+import { AlertService } from '../../../../core/services/alert.service'
 
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
+import { AlumnoService } from '../../../../core/services/alumno.service';
 
 @Component({
   selector: 'app-singup',
@@ -21,8 +22,9 @@ export class SingupComponent {
 
   constructor(
     private fb: FormBuilder,
-    private store: Store
-
+    private store: Store,
+    private alumnoService: AlumnoService,
+    private alertService: AlertService
   ) {
     this.linkCss = document.querySelector('#style-global');
     this.linkCss?.setAttribute('href', './assets/styles/registro.css');
@@ -33,12 +35,30 @@ export class SingupComponent {
   }
 
 
-  public makeForm(): void {
+  public makeForm():  FormGroup{
     this.form = this.fb.group({
-      username: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required)
+      username: new FormControl('', [Validators.required, Validators.pattern('/^[0-9a-zA-Z]+$/')]),
+      password: new FormControl('', [Validators.required, Validators.pattern('/^[0-9a-zA-Z]+$/')]),
+      apellidop: new FormControl('', [Validators.required, Validators.pattern('/^[0-9a-zA-Z]+$/')]),
+      apellidom: new FormControl('', [Validators.required, Validators.pattern('/^[0-9a-zA-Z]+$/')]),
+      email: new FormControl('', [Validators.required, Validators.email]),
     })
+    return this.form
   }
+
+
+  onSubmit(): void {
+    /*
+    console.log(this.form);
+    if(this.form.valid){
+      const {...body } = this.form.value;
+      this.alumnoService.singup(body)
+                      .subscribe( res => this.router.navigate(['']), (error) =>
+                                                this.alertService.makeNotification('error', 'Error', error.error.message));
+    }
+    */
+  }
+
 
 
 }

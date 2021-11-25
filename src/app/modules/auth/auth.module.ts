@@ -16,13 +16,14 @@ import { ComponentsModule } from '../../shared/components/components.module';
   declarations: [
     SinginComponent,
     SingupComponent,
-    PoliticasComponent
+    PoliticasComponent,
+
   ],
   imports: [
     RouterModule,
     CommonModule,
     ReactiveFormsModule,
-    ComponentsModule
+    ComponentsModule,
   ]
 })
 export class AuthModule { }

@@ -12,26 +12,26 @@
     <div class="square" style="--i:3"></div>
     <div class="square" style="--i:4"></div>
     <div class="container">
-      <div class="form">
+      <div class="form" (ngSubmit)="onSubmit()" [formGroup]="form">
         <h2>Registro</h2>
         <form action="#">
           <div class="inputBox">
-            <input type="text" placeholder="Usuario">
+            <input formControlName="username" type="text" placeholder="Usuario">
           </div>
           <div class="inputBox">
-            <input type="password" placeholder="Contraseña">
+            <input formControlName="password" type="password" placeholder="Contraseña">
           </div>
           <div class="inputBox">
-            <input type="text" placeholder="Nombre">
+            <input formControlName="name" type="text" placeholder="Nombre">
           </div>
           <div class="inputBox">
-            <input type="text" placeholder="Apellido Paterno">
+            <input formControlName="apellidop" type="text" placeholder="Apellido Paterno">
           </div>
           <div class="inputBox">
-            <input type="text" placeholder="Apellido Materno">
+            <input formControlName="apellidom" type="text" placeholder="Apellido Materno">
           </div>
           <div class="inputBox">
-            <input type="email" placeholder="Email">
+            <input formControlName="email" type="email" placeholder="Email">
           </div>
           <div class="inputBox">
             <input type="checkbox">Acepto politicas de Privacidad

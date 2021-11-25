@@ -10,6 +10,7 @@ import { ComponentsModule } from '../../shared/components/components.module';
 import { PerfilalumnoComponent } from './components/perfilalumno/perfilalumno.component';
 import { FtutorialComponent } from './components/ftutorial/ftutorial.component';
 import { StutorialComponent } from './components/stutorial/stutorial.component';
+import { ChatAComponent } from './components/chat-a/chat-a.component';
 
 @NgModule({
 
@@ -19,7 +20,8 @@ import { StutorialComponent } from './components/stutorial/stutorial.component';
     NavbarAComponent,
     PerfilalumnoComponent,
     FtutorialComponent,
-    StutorialComponent
+    StutorialComponent,
+    ChatAComponent
   ],
   imports: [
     AuthModule,
