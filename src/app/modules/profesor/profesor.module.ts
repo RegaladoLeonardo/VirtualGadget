@@ -7,13 +7,15 @@ import { ComponentsModule } from '../../shared/components/components.module';
 import { MaterialModule } from 'src/app/material.module';
 import { ChatfComponent } from './components/chatf/chatf.component';
 import { PerfilpComponent } from './components/perfilp/perfilp.component';
+import { EscenariospComponent } from './components/escenariosp/escenariosp.component';
 
 
 @NgModule({
   declarations: [
     PrincipalpComponent,
     ChatfComponent,
-    PerfilpComponent
+    PerfilpComponent,
+    EscenariospComponent
     ],
   imports: [
     AuthModule,

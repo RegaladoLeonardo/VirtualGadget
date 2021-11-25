@@ -9,6 +9,8 @@ import { PerfilalumnoComponent } from './components/perfilalumno/perfilalumno.co
 import { FtutorialComponent } from './components/ftutorial/ftutorial.component';
 import { StutorialComponent } from './components/stutorial/stutorial.component';
 import { ChatAComponent } from './components/chat-a/chat-a.component';
+import { EscenariosaComponent } from './components/escenariosa/escenariosa.component';
+import { CuestionariosaComponent } from './components/cuestionariosa/cuestionariosa.component';
 
 const inicioRoutes: Routes = [
   { path: 'inicio', component: PrincipalComponent, pathMatch: 'full' },
@@ -16,7 +18,11 @@ const inicioRoutes: Routes = [
   { path: 'perfil', component:  PerfilalumnoComponent, pathMatch: 'full' },
   { path: 'tuto1', component:  FtutorialComponent, pathMatch: 'full' },
   { path: 'tuto2', component:  StutorialComponent, pathMatch: 'full' },
-  { path: 'chat', component:  ChatAComponent, pathMatch: 'full' }
+  { path: 'chat', component:  ChatAComponent, pathMatch: 'full' },
+  { path: 'escenariosA', component:  EscenariosaComponent, pathMatch: 'full' },
+  { path: 'cuestionariosA', component:  CuestionariosaComponent, pathMatch: 'full' }
+
+
 ];
 
 @NgModule({
