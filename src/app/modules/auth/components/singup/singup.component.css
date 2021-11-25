@@ -1,58 +1,5 @@
 
 
-header{
-  position: fixed;
-  top:0; left:0;
-  width: 100%;
-  background-image: linear-gradient(to right, #1847ac, #61229c);
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
-  padding: 20px 9%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1000;
-  animation: slideInDown;
-  animation-duration: 0.5s;
-  transition: all 500ms ease;
-}
-
-header .logo{
-  font-weight: 700;
-  font-size: 20px;
-  color: rgb(90, 128, 211);
-}
-header .logo span{
-  font-weight: 700;
-  color: rgb(231, 231, 231);
-}
-header .navbar a{
-  font-weight: bolder;
-  font-size: 1rem;
-  margin-left: 2rem;
-  color: rgb(255, 255, 255);
-}
-header .navbar .spectre{
-  font-size: 1.2rem;
-  margin-left: 2rem;
-  font-weight: 700;
-  color: rgb(174, 173, 253);
-}
-header .navbar a:hover{
-  color: rgb(90, 128, 211);
-}
-header .navbar .spectre:hover{
-  color:rgb(255, 255, 255);
-}
-header input{
-  display: none;
-}
-header label{
-  font-size: 3rem;
-  color: var(--bluel);
-  cursor: pointer;
-  visibility: hidden;
-  opacity: 0;
-}
 section{
   display: flex;
   justify-content: center;

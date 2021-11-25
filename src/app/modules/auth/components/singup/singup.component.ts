@@ -34,17 +34,19 @@ export class SingupComponent {
     this.storeSub = this.store.getObservable.subscribe((store) => {
       this.state = store;
   })
+
   }
 
 
 
   public makeForm():  FormGroup{
     this.form = this.fb.group({
-      username: new FormControl('', [Validators.required, Validators.pattern('/^[0-9a-zA-Z]+$/')]),
-      password: new FormControl('', [Validators.required, Validators.pattern('/^[0-9a-zA-Z]+$/')]),
-      apellidop: new FormControl('', [Validators.required, Validators.pattern('/^[0-9a-zA-Z]+$/')]),
-      apellidom: new FormControl('', [Validators.required, Validators.pattern('/^[0-9a-zA-Z]+$/')]),
-      fechaNac: new FormControl('', [Validators.required, Validators.pattern('^(?:3[01]|[12][0-9]|0?[1-9])([\-/.])(0?[1-9]|1[1-2])\1\d{4}$')]),
+      username: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z]+$/)]),
+      name: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z]+$/)]),
+      password: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z]+$/)]),
+      apellidop: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z]+$/)]),
+      apellidom: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z]+$/)]),
+      fechaNac: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
       valor: new FormControl(1)
     })
@@ -57,8 +59,10 @@ export class SingupComponent {
     console.log(this.form);
     if(this.form.valid){
       const {...body } = this.form.value;
-      this.alumnoService.singup(body).subscribe( res => this.router.navigate(['']), (error) =>
+
+      this.alumnoService.singup(body).subscribe( res => this.router.navigate(['/auth/login']), (error) =>
                                                 this.alertService.makeNotification('error', 'Error', error.error.message));
+
     }
 
   }

@@ -8,6 +8,7 @@ import { HomeModule } from './modules/home/home.module';
 import { AlumnoModule } from './modules/alumno/alumno.module';
 import { AdminModule } from './modules/admin/admin.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AuthModule,
     HomeModule,
     AlumnoModule,
+    HttpClientModule,
     AdminModule,
     BrowserAnimationsModule
   ],
