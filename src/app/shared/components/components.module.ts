@@ -9,6 +9,7 @@ import { ProfesornavbarComponent } from './profesornavbar/profesornavbar.compone
 import { AlumnonavbarComponent } from './alumnonavbar/alumnonavbar.component';
 import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
 import { RouterModule } from '@angular/router';
+import { NabvarpComponent } from './nabvarp/nabvarp.component';
 
 
 
@@ -20,6 +21,7 @@ import { RouterModule } from '@angular/router';
     ProfesornavbarComponent,
     AlumnonavbarComponent,
     AdminnavbarComponent,
+    NabvarpComponent
 
   ],
   imports: [
@@ -32,7 +34,8 @@ import { RouterModule } from '@angular/router';
     ProfesorsidebarComponent,
     ProfesornavbarComponent,
     AlumnonavbarComponent,
-    AdminnavbarComponent
+    AdminnavbarComponent,
+    NabvarpComponent
   ]
 })
 export class ComponentsModule { }

@@ -1,0 +1,55 @@
+*{
+  text-decoration: none;
+}
+
+header{
+  position: fixed;
+  top:0; left:0;
+  width: 100%;
+  background: rgb(4, 19, 52);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
+  padding: 1rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  animation: slideInDown;
+  animation-duration: 0.5s;
+  transition: all 500ms ease;
+}
+
+header .logo{
+  font-weight: 600;
+  font-size: 24px;
+  color: rgb(64, 134, 226);
+}
+header .logo span{
+  color: rgb(231, 231, 231);
+}
+header .navbar a{
+  font-weight: bolder;
+  font-size: 1rem;
+  margin-left: 2rem;
+  color: rgb(255, 255, 255);
+}
+header .navbar .spectre{
+  font-size: 1rem;
+  margin-left: 2rem;
+  color: rgb(96, 165, 255);
+}
+header .navbar a:hover{
+  color: var(--bluel);
+}
+header .navbar .spectre:hover{
+  color:rgb(255, 255, 255);
+}
+header input{
+  display: none;
+}
+header label{
+  font-size: 3rem;
+  color: var(--bluel);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+}
