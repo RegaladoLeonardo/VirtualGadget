@@ -14,19 +14,14 @@ export class AlumnoService{
   private url: string;
 
   constructor(
-      private http: HttpClient,
-      //private store: Store<appReducer>
+      private http: HttpClient
   ){
       this.url = environment.url;
   }
 
-  /*
-  public singup = (body: { username: string, password: string }): Observable<boolean> =>
-  this.http.post<any>(`${this.url}/user/login`, body).pipe(
-      map( res => {
 
-      })
-  )
-*/
+  public singup = (data: any): Observable<any> =>
+                        this.http.post(`${this.url}/user/add`, data)
+
 
 }
