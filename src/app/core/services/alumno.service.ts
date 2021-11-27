@@ -21,7 +21,7 @@ export class AlumnoService{
 
 
   public singup = (data: any): Observable<any> =>
-                        this.http.post(`${this.url}/user/add`, data)
-
+                        of(true)
+                        //this.http.post(`${this.url}/user/add`, data)
 
 }
