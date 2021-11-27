@@ -35,6 +35,13 @@ section .color:nth-child(3){
 .box{
   position: relative;
 }
+
+
+.message-erro{
+  color:red;
+}
+
+
 .box .square{
   position: absolute;
   backdrop-filter: blur(5px);

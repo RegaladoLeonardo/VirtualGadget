@@ -17,24 +17,45 @@
         <form>
           <div class="inputBox">
             <input formControlName="username" type="text" placeholder="Usuario">
+            <div *ngIf=" hasError('username') " class="message-error">
+              <p class="message-erro"> Dato incorrecto </p>
+            </div>
           </div>
           <div class="inputBox">
             <input formControlName="password" type="password" placeholder="Contraseña">
+            <div *ngIf=" hasError('password') " class="message-error">
+              <p class="message-erro"> Dato incorrecto </p>
+            </div>
           </div>
           <div class="inputBox">
             <input formControlName="name" type="text" placeholder="Nombre">
+            <div *ngIf=" hasError('name') " class="message-error">
+              <p class="message-erro"> Dato incorrecto </p>
+            </div>
           </div>
           <div class="inputBox">
             <input formControlName="apellidop" type="text" placeholder="Apellido Paterno">
+            <div *ngIf=" hasError('apellidop') " class="message-error">
+              <p class="message-erro"> Dato incorrecto </p>
+            </div>
           </div>
           <div class="inputBox">
             <input formControlName="apellidom" type="text" placeholder="Apellido Materno">
+            <div *ngIf=" hasError('apellidom') " class="message-error">
+              <p class="message-erro"> Dato incorrecto </p>
+            </div>
           </div>
           <div class="inputBox">
             <input formControlName="email" type="email" placeholder="Email">
+            <div *ngIf=" hasError('FechaNac') " class="message-error">
+              <p class="message-erro"> Dato incorrecto </p>
+            </div>
           </div>
           <div class="inputBox">
             <input formControlName="fechaNac" type="date" placeholder="Fecha de nacimiento">
+            <div *ngIf=" hasError('email') " class="message-error">
+              <p class="message-erro" > Dato incorrecto </p>
+            </div>
           </div>
           <div class="inputBox">
             <input type="checkbox">Acepto politicas de Privacidad

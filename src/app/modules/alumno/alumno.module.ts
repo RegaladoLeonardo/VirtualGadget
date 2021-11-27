@@ -12,6 +12,7 @@ import { StutorialComponent } from './components/stutorial/stutorial.component';
 import { ChatAComponent } from './components/chat-a/chat-a.component';
 import { EscenariosaComponent } from './components/escenariosa/escenariosa.component';
 import { CuestionariosaComponent } from './components/cuestionariosa/cuestionariosa.component';
+import { PipeModule } from '../../shared/pipes/pipe.module';
 
 @NgModule({
 
@@ -30,7 +31,8 @@ import { CuestionariosaComponent } from './components/cuestionariosa/cuestionari
     CommonModule,
     RouterModule,
     MaterialModule,
-    ComponentsModule
+    ComponentsModule,
+    PipeModule
   ]
 })
 

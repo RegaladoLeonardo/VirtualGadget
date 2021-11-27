@@ -19,6 +19,7 @@ export class SingupComponent {
   public storeSub: Subscription;
   public state: any;
   public form!: FormGroup;
+  public sumbited: boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -38,11 +39,11 @@ export class SingupComponent {
 
   public makeForm():  FormGroup{
     this.form = this.fb.group({
-      username: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z]+$/)]),
-      name: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z]+$/)]),
-      password: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z]+$/)]),
-      apellidop: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z]+$/)]),
-      apellidom: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z]+$/)]),
+      username: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z ]+$/)]),
+      name: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z ]+$/)]),
+      password: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z ]+$/)]),
+      apellidop: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z ]+$/)]),
+      apellidom: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z ]+$/)]),
       fechaNac: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
       valor: new FormControl(1)
@@ -54,6 +55,7 @@ export class SingupComponent {
   onSubmit(): void {
 
     console.log(this.form);
+    this.sumbited = true;
     if(this.form.valid){
       const {...body } = this.form.value;
 
@@ -62,6 +64,11 @@ export class SingupComponent {
 
     }
 
+  }
+
+  public hasError(field: string) {
+    const control = this.form.get(field);
+    return control?.invalid && (control.touched || this.sumbited);
   }
 
 
