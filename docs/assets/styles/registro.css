@@ -1,0 +1,15 @@
+
+*{
+  margin:0;
+  padding: 0;
+}
+
+
+
+html{
+  background:url(../img/green-low-poly-abstract-background-free-vector.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+
+}

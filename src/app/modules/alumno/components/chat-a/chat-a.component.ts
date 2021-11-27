@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ChatAComponent implements OnInit {
 
   name: string = "VirtualUsu"
-  url: string = 'http://localhost:3000/catch?name=leonardo';
+  url: string = 'https://chats-virtualgadget.herokuapp.com/catch?name=';
 
   public linkCss: Element | null;
   constructor() {

@@ -32,7 +32,8 @@
     <div class="container">
       <div class="form">
         <h2>Inicia Sesion</h2>
-        <form action="#">
+        <form [formGroup]="form"
+        (ngSubmit)="onSubmit()">
           <div class="inputBox">
             <input type="text" placeholder="Usuario">
           </div>
@@ -43,6 +44,7 @@
             <a href=".#"  routerLink="/alumno/inicio" ><button type="submit">Ingresar Alumno</button></a>
             <a href="#"  routerLink="/profesor/inicioP"><button type="submit">Ingresar Profesor</button></a>
             <a href="#"  routerLink="/admin/inicioA"><button type="submit">Ingresar Administrador</button></a>
+            <button class="button-cfe-full" type="submit">Iniciar sesión</button>
           </div>
           <p class="forget">¿No tienes una cuenta? <a href="/auth/singup">Ingresa Aqui</a></p>
         </form>

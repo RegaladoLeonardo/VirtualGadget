@@ -15,7 +15,6 @@ import { Router } from '@angular/router';
 })
 export class SingupComponent {
 
-  public linkCss: Element | null;
   //no es necesario ve
   public storeSub: Subscription;
   public state: any;
@@ -28,8 +27,6 @@ export class SingupComponent {
     private alertService: AlertService,
     private router: Router,
   ) {
-    this.linkCss = document.querySelector('#style-global');
-    this.linkCss?.setAttribute('href', './assets/styles/registro.css');
     this.makeForm();
     this.storeSub = this.store.getObservable.subscribe((store) => {
       this.state = store;
