@@ -12,9 +12,9 @@
     <div class="square" style="--i:3"></div>
     <div class="square" style="--i:4"></div>
     <div class="container">
-      <div class="form" >
+      <div class="form" (ngSubmit)="onSubmit()" [formGroup]="form">
         <h2>Registro</h2>
-        <form (ngSubmit)="onSubmit()" [formGroup]="form">
+        <form>
           <div class="inputBox">
             <input formControlName="username" type="text" placeholder="Usuario">
           </div>
