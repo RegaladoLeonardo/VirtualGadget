@@ -12,16 +12,19 @@ import { catchError, map, tap, pluck, debounceTime } from 'rxjs/operators';
 export class AlumnoService{
 
   private url: string;
+  private url1: string;
+
 
   constructor(
       private http: HttpClient
   ){
-      this.url = environment.url;
+      this.url = environment.url[0];
+      this.url1 = environment.url[1]
   }
 
 
   public singup = (data: any): Observable<any> =>
-                        of(true)
-                        //this.http.post(`${this.url}/user/add`, data)
+
+                        this.http.post(`${this.url1}/signup`, data)
 
 }

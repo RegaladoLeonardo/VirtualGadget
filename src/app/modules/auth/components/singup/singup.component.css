@@ -109,7 +109,7 @@ section .color:nth-child(3){
 }
 .form h2{
   position: relative;
-  color: #ffffff;
+  color: #000000;
   font-size: 24px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -122,7 +122,7 @@ section .color:nth-child(3){
   bottom: -10px;
   width: 80px;
   height: 4px;
-  background: white;
+  background: rgb(0, 0, 0);
 }
 .form .inputBox{
   width: 100%;
@@ -140,12 +140,12 @@ section .color:nth-child(3){
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 16px;
   letter-spacing: 1px;
-  color: white;
+  color: rgb(0, 0, 0);
   box-shadow: 0 5px 15px rgba(121, 1, 1, 0.05);
 }
 
 .form .inputBox input::placeholder{
-  color: #ffffff;
+  color: #000000;
 }
 .form .inputBox input[type="submit"]{
   background: white;
@@ -157,10 +157,10 @@ section .color:nth-child(3){
 }
 .forget{
   margin-top: 5px;
-  color: white;
+  color: rgb(5, 5, 5);
 }
 .forget a{
-  color: white;
+  color: rgb(33, 42, 156);
   font-weight: 500;
   text-decoration: none;
 }
