@@ -10,6 +10,7 @@ import { catchError, map, tap, pluck, debounceTime } from 'rxjs/operators';
 })
 
 export class AlumnoService{
+  token: any;
 
   private url: string;
   private url1: string;
@@ -19,7 +20,8 @@ export class AlumnoService{
       private http: HttpClient
   ){
       this.url = environment.url[0];
-      this.url1 = environment.url[1]
+      this.url1 = environment.url[1];
+
   }
 
 

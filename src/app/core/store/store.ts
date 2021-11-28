@@ -6,7 +6,8 @@ import { Observable, BehaviorSubject } from 'rxjs';
 })
 export class Store {
 
-  public store: any = { contador: 0, bandera: true };
+  public store: any = { contador: 0, bandera: true , auth: false, token: null};
+  //public store: any = { id:1 ,username: '', nombre: '', app:'', apm:'', fechaNac:'', valor:1  };
   public storeObservable: BehaviorSubject<any> = new BehaviorSubject<any>(this.store);
 
   get getObservable(): Observable<any> {

@@ -59,7 +59,7 @@ export class SingupComponent {
     if(this.form.valid){
       const {...body } = this.form.value;
 
-      this.alumnoService.singup(body).subscribe( res => this.router.navigate(['/auth/login']), (error) =>
+      this.alumnoService.singup(body).subscribe( res => this.router.navigate(['/alumno/inicio']), (error) =>
                                                 this.alertService.makeNotification('error', 'Error', error.error.message));
 
     }

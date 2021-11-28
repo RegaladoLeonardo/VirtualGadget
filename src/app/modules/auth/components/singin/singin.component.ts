@@ -44,6 +44,7 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public click() {
     this.store.setStore({contador: this.state.contador + 1, bandera: true});
+    //this.store.setStore({ id: ,username: , nombre: , app:, apm:, fechaNac:, valor:  });
   }
 
   ngOnDestroy(): void {
