@@ -8,20 +8,25 @@ import { Router } from '@angular/router';
 })
 
 export class AdminGuard implements CanLoad, CanActivate {
-
+/*
+  username: string =  'Admin90E7';
+  password: string = 'VGproyecto9';
+*/
   constructor(
     private router: Router
-  ) {}
+  ){
+
+  }
 
 
   canLoad(
-    route: Route
+    route: Route,
   ): Observable<boolean> | Promise<boolean> | boolean {
-
-
 
      return true;
   }
+
+
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     return true;
   }

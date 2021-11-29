@@ -15,9 +15,9 @@ export class AdminnavbarComponent implements OnInit {
   public wrapp = (): any => document.querySelector('#wrapper')?.classList.toggle('toggled');
 
 
-    public logout = (): void => {
-      console.log("hola")
-    }
+  public logout = (): void => {
+    localStorage.clear();
+  }
 
 
 }

@@ -2,6 +2,9 @@ import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit } from '@angula
 import { Subscription } from 'rxjs';
 import { Store } from 'src/app/core/store/store';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AlumnoService } from 'src/app/core/services/alumno.service';
+import { Router } from '@angular/router';
+import { AlertService } from 'src/app/core/services/alert.service';
 
 @Component({
   selector: 'app-singin',
@@ -14,11 +17,16 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
   public storeSub: Subscription;
   public state: any;
   public form!: FormGroup;
+  public sumbited: boolean = false;
+  token: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdkZmdkZmciLCJpYXQiOjE2MzgxNzMwNTYsImV4cCI6MTYzODIxNjI1Nn0.FlZpwHXxtVZP_XJfKh4VLcq0w2vi4ykCC0lEcKvf9rQ';
 
   constructor(
     private elementRef: ElementRef,
     private store: Store,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private alumnoService: AlumnoService,
+    private router: Router,
+    private alertService: AlertService
   ) {
     this.makeForm();
     this.linkCss = document.querySelector('#style-global');
@@ -32,21 +40,27 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public makeForm(): void {
     this.form = this.fb.group({
-      username: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required)
+      username: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z ]+$/)]),
+      password: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z ]+$/)])
     })
   }
 
-  onSubmit(): void {
-    console.log(this.form);
+  public hasError(field: string) {
+    const control = this.form.get(field);
+    return control?.invalid && (control.touched || this.sumbited);
   }
 
-
+/*
   public click() {
     this.store.setStore({contador: this.state.contador + 1, bandera: true});
     //this.store.setStore({ id: ,username: , nombre: , app:, apm:, fechaNac:, valor:  });
   }
 
+
+  onSubmit(){
+
+  }
+*/
   ngOnDestroy(): void {
     this.storeSub.unsubscribe();
   }
@@ -57,6 +71,28 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
   ngAfterViewInit(){
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '';
  }
+
+
+  onSubmit(): void {
+
+  console.log(this.form);
+  this.sumbited = true;
+  if(this.form.valid){
+    const {...body } = this.form.value;
+/*
+    localStorage.setItem('token', this.token);
+
+    this.alumnoService.verify(localStorage.getItem('token')).subscribe( res => this.router.navigate(['/alumno/inicio']), (error) =>
+                                              this.alertService.makeNotification('error', 'Error', error.error.message));
+*/
+
+
+      this.alumnoService.signin(body).subscribe( res => this.router.navigate(['/alumno/inicio']), (error) =>
+                                                this.alertService.makeNotification('error', 'Error', error.error.message));
+
+    }
+
+}
 
 
 }

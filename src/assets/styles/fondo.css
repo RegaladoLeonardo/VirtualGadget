@@ -37,6 +37,11 @@ body{
   height: 90% !important;
 }
 
+.mapa{
+  width: 100% !important;
+  height: 90% !important;
+}
+
 iframe html {
   background-color: yellow !important;
 }

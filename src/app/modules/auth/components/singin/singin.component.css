@@ -109,6 +109,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 */
+
+
+.message-erro{
+  color:red;
+}
+
 section{
   display: flex;
   justify-content: center;

@@ -21,6 +21,7 @@ export class SingupComponent {
   public form!: FormGroup;
   public sumbited: boolean = false;
 
+
   constructor(
     private fb: FormBuilder,
     private store: Store,
@@ -58,6 +59,7 @@ export class SingupComponent {
     this.sumbited = true;
     if(this.form.valid){
       const {...body } = this.form.value;
+
 
       this.alumnoService.singup(body).subscribe( res => this.router.navigate(['/alumno/inicio']), (error) =>
                                                 this.alertService.makeNotification('error', 'Error', error.error.message));

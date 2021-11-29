@@ -16,7 +16,7 @@ export class AlumnonavbarComponent implements OnInit {
 
 
     public logout = (): void => {
-      console.log("hola")
+      localStorage.clear();
     }
 
 
