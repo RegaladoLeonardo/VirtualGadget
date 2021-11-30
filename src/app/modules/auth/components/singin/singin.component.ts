@@ -5,6 +5,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { AlumnoService } from 'src/app/core/services/alumno.service';
 import { Router } from '@angular/router';
 import { AlertService } from 'src/app/core/services/alert.service';
+import { ProfesorService } from '../../../../core/services/profesor.service';
 
 @Component({
   selector: 'app-singin',
@@ -17,6 +18,7 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
   public storeSub: Subscription;
   public state: any;
   public form!: FormGroup;
+  public formp!: FormGroup;
   public sumbited: boolean = false;
   token: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdkZmdkZmciLCJpYXQiOjE2MzgxNzMwNTYsImV4cCI6MTYzODIxNjI1Nn0.FlZpwHXxtVZP_XJfKh4VLcq0w2vi4ykCC0lEcKvf9rQ';
 
@@ -24,11 +26,14 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
     private elementRef: ElementRef,
     private store: Store,
     private fb: FormBuilder,
+    private fp: FormBuilder,
     private alumnoService: AlumnoService,
     private router: Router,
-    private alertService: AlertService
+    private alertService: AlertService,
+    private profesorService: ProfesorService,
   ) {
     this.makeForm();
+    this.makeFormP();
     this.linkCss = document.querySelector('#style-global');
     this.linkCss?.setAttribute('href', './assets/styles/home.css');
     this.storeSub = this.store.getObservable.subscribe((store) => {
@@ -47,6 +52,18 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public hasError(field: string) {
     const control = this.form.get(field);
+    return control?.invalid && (control.touched || this.sumbited);
+  }
+
+  public makeFormP(): void {
+    this.formp = this.fp.group({
+      usernamep: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z ]+$/)]),
+      passwordp: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z ]+$/)])
+    })
+  }
+
+  public hasErrorP(field: string) {
+    const control = this.formp.get(field);
     return control?.invalid && (control.touched || this.sumbited);
   }
 
@@ -86,13 +103,28 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
                                               this.alertService.makeNotification('error', 'Error', error.error.message));
 */
 
-
       this.alumnoService.signin(body).subscribe( res => this.router.navigate(['/alumno/inicio']), (error) =>
-                                                this.alertService.makeNotification('error', 'Error', error.error.message));
-
+                                                this.alertService.makeNotification('error', '¡Usuario y/o contraseña incorrecta!', error.error.message));
     }
-
 }
 
+
+  onSubmitP(): void {
+
+    console.log(this.formp);
+    this.sumbited = true;
+    if(this.formp.valid){
+      const {...body } = this.formp.value;
+  /*
+      localStorage.setItem('token', this.token);
+
+      this.alumnoService.verify(localStorage.getItem('token')).subscribe( res => this.router.navigate(['/alumno/inicio']), (error) =>
+                                                this.alertService.makeNotification('error', 'Error', error.error.message));
+  */
+
+        this.profesorService.signinP(body).subscribe( res => this.router.navigate(['/profesor/inicioP']), (error) =>
+                                                  this.alertService.makeNotification('error', 'Nombre y/o contraseña incorrecta!', error.error.message));
+      }
+  }
 
 }

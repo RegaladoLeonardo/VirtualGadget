@@ -109,7 +109,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 */
-
+.button-cfe-full{
+  font-size: 22px;
+}
 
 .message-erro{
   color:red;
@@ -233,7 +235,7 @@ section .color:nth-child(3){
   bottom: -10px;
   width: 180px;
   height: 4px;
-  background: white;
+  background: rgb(0, 0, 0);
 }
 .form .inputBox{
   width: 100%;
@@ -251,7 +253,7 @@ section .color:nth-child(3){
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 16px;
   letter-spacing: 1px;
-  color: white;
+  color: rgb(0, 0, 0);
   box-shadow: 0 5px 15px rgba(121, 1, 1, 0.05);
 }
 .form .inputBox2{
@@ -275,14 +277,14 @@ section .color:nth-child(3){
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 12px;
   letter-spacing: 1px;
-  color: white;
+  color: rgb(0, 0, 0);
   box-shadow: 0 5px 15px rgba(121, 1, 1, 0.05);
 }
 .form .inputBox input::placeholder{
-  color: #ffffff;
+  color: #000000;
 }
 .form .inputBox input[type="submit"]{
-  background: white;
+  background: rgb(0, 0, 0);
   color: #777;
   max-width: 110px;
   cursor: pointer;
@@ -292,7 +294,7 @@ section .color:nth-child(3){
 }
 .forget{
   margin-top: 5px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 .forget a{
   color: white;

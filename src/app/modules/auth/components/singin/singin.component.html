@@ -31,7 +31,7 @@
     <div class="square" style="--i:4"></div>
     <div class="container">
       <div class="form">
-        <h2>Inicia Sesion</h2>
+        <h2>Inicia Sesion Alumno</h2>
         <form [formGroup]="form"
         (ngSubmit)="onSubmit()">
 
@@ -48,11 +48,10 @@
             </div>
           </div>
           <div class="inputBox2">
-
+            <!--
             <a href=".#"  routerLink="/alumno/inicio" ><button type="submit">Ingresar Alumno</button></a>
-            <a href="#"  routerLink="/profesor/inicioP"><button type="submit">Ingresar Profesor</button></a>
-            <a href="#"  routerLink="/admin/inicioA"><button type="submit">Ingresar Administrador</button></a>
-            <button class="button-cfe-full" type="submit">Iniciar sesión</button>
+            -->
+            <button class="button-cfe-full" type="submit" >Iniciar Sesion</button>
 
           </div>
 
@@ -60,6 +59,41 @@
 
         </form>
       </div>
+
+    </div>
+
+
+    <div class="container">
+      <div class="form">
+        <h2>Inicia Sesion Profesor</h2>
+        <form [formGroup]="formp"
+        (ngSubmit)="onSubmitP()">
+
+          <div class="inputBox">
+            <input formControlName="usernamep" type="text" placeholder="Usuario">
+            <div *ngIf=" hasErrorP('usernamep') " class="message-error">
+              <p class="message-erro"> Dato incorrecto </p>
+            </div>
+          </div>
+          <div class="inputBox">
+            <input formControlName="passwordp" type="password" placeholder="Contraseña">
+            <div *ngIf=" hasErrorP('passwordp') " class="message-error">
+              <p class="message-erro"> Dato incorrecto </p>
+            </div>
+          </div>
+          <div class="inputBox2">
+            <!--
+            <a href=".#"  routerLink="/alumno/inicio" ><button type="submit">Ingresar Alumno</button></a>
+            -->
+            <button class="button-cfe-full" type="submit" >Iniciar Sesion</button>
+
+          </div>
+
+        </form>
+      </div>
+
+
+
     </div>
   </div>
 </section>

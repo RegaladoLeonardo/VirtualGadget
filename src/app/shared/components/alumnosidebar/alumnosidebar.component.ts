@@ -11,7 +11,10 @@ export class AlumnosidebarComponent implements OnInit {
   public storeSub: Subscription;
 
   public state: any;
-  public username: string = '';
+  //public username!: string = localStorage.getItem('username') ;
+  public username:string | null='';
+
+
   nombre: string= 'VirtualGadget';
   //name: string = this.storeInfo.name ;
   url: string = 'https://chats-virtualgadget.herokuapp.com/catch'+'?name='+this.nombre;
@@ -19,12 +22,14 @@ export class AlumnosidebarComponent implements OnInit {
   constructor(
     private store: Store
   ) {
-
+    console.log('Del sidebar: '+ localStorage.getItem('username'));
     this.storeSub = this.store.getObservable.subscribe((store) => {
       this.state = store;
-      this.username = store.username;
+      //this.username = store.username;
+
 
     })
+    this.username = localStorage.getItem('username');
 
     console.log("Este es el username");
     console.log(": "+ this.username);

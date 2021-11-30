@@ -9,7 +9,7 @@ import { catchError, map, tap, pluck, debounceTime } from 'rxjs/operators';
   providedIn: 'root'
 })
 
-export class AlumnoService{
+export class ProfesorService{
   token: any;
 
   private url: string;
@@ -25,7 +25,7 @@ export class AlumnoService{
 
   }
 
-
+/*
   public singup = (data: any): Observable<any> =>
               this.http.post(`${this.url1}/signup`, data).pipe(
                 tap((res: any) => {
@@ -33,49 +33,33 @@ export class AlumnoService{
                   console.log(tokenReady);
                   console.log('del verify: '+ resultadoT);
                   this.store.setStore({  auth: true, token: tokenReady, ...Usu});
-                  /*
-                  this.saveToken(token, remember);
-                  this.store.dispatch(login({ user, token }));
-                  return true;
-                  */
+
+                  //this.saveToken(token, remember);
+                  //this.store.dispatch(login({ user, token }));
+                  //this.saveToken(token)return true;
+
                   localStorage.setItem('token',tokenReady);
                   })
               )
+    */
 
-            public signin = (data: any): Observable<any> =>
-            this.http.post(`${this.url1}/signin`, data).pipe(
+            public signinP = (data: any): Observable<any> =>
+            this.http.post(`${this.url1}/signinp`, data).pipe(
               tap((res: any) => {
-
+/*
                 const {message, rows, tokenReadyL } = res;
-
-                let alumno = JSON.parse(JSON.stringify(rows[0]));
-
                 localStorage.setItem('token', tokenReadyL);
-                localStorage.setItem('username', alumno.username);
-                console.log('Username recibido: '+alumno.username);
-                this.store.setStore({  auth: true, token: tokenReadyL, ...rows});
 
                 console.log("mensaje: "+message);
                 console.log('rows'+ JSON.parse(JSON.stringify(rows)) );
+                */
+
 
                 })
             )
 
 
-  public verify = (token: any): Observable<any> => {
 
-    const headers = new HttpHeaders({token});
-    return this.http.get(`${this.url1}/verifyToken`, { headers } ).pipe(
-      tap((res: any) => {
-        const { resultadoT } =  res;
-
-        res.status(200);
-        console.log('res: '+res);
-        console.log('resultado: '+ resultadoT);
-      })
-
-      )
-  }
 
 
 
