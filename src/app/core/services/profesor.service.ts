@@ -46,6 +46,9 @@ export class ProfesorService{
             public signinP = (data: any): Observable<any> =>
             this.http.post(`${this.url1}/signinp`, data).pipe(
               tap((res: any) => {
+
+              const { rows, tokenReadyL } = res;
+                console.log('hola');
 /*
                 const {message, rows, tokenReadyL } = res;
                 localStorage.setItem('token', tokenReadyL);

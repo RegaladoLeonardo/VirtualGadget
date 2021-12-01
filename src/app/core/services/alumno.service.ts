@@ -29,15 +29,17 @@ export class AlumnoService{
   public singup = (data: any): Observable<any> =>
               this.http.post(`${this.url1}/signup`, data).pipe(
                 tap((res: any) => {
-                  const { tokenReady, Usu, resultadoT } = res;
+                  const { tokenReady, Usu } = res;
                   console.log(tokenReady);
-                  console.log('del verify: '+ resultadoT);
+                  //console.log('del verify: '+ resultadoT);
+
                   this.store.setStore({  auth: true, token: tokenReady, ...Usu});
                   /*
                   this.saveToken(token, remember);
                   this.store.dispatch(login({ user, token }));
                   return true;
                   */
+                  console.log('Usu:'+ Usu.usuario);
                   localStorage.setItem('token',tokenReady);
                   })
               )
@@ -52,7 +54,7 @@ export class AlumnoService{
 
                 localStorage.setItem('token', tokenReadyL);
                 localStorage.setItem('username', alumno.username);
-                console.log('Username recibido: '+alumno.username);
+                console.log('Username recibido: '+ rows.usuario);
                 this.store.setStore({  auth: true, token: tokenReadyL, ...rows});
 
                 console.log("mensaje: "+message);
