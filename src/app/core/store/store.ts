@@ -19,6 +19,11 @@ export class Store {
     this.store = { ...this.store, ...data }; // this.store = { contador: 1, bandera: true };
     this.storeObservable.next(this.store);
   }
+
+  public clearStore(): void {
+    this.store = { auth: false, token: null }; // this.store = { contador: 1, bandera: true };
+    this.storeObservable.next(this.store);
+  }
 /*
   public resetStore(): void{
 

@@ -115,16 +115,22 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
     this.sumbited = true;
     if(this.formp.valid){
       const {...body } = this.formp.value;
-  /*
-      localStorage.setItem('token', this.token);
-
-      this.alumnoService.verify(localStorage.getItem('token')).subscribe( res => this.router.navigate(['/alumno/inicio']), (error) =>
-                                                this.alertService.makeNotification('error', 'Error', error.error.message));
-  */
-
-        this.profesorService.signinP(body).subscribe( res => this.router.navigate(['/profesor/inicioP']), (error) =>
+  
+  console.log('COMPARARE '+body.usernamep );
+    if(body.usernamep  == 'Admin90E7'){
+/*
+    this.profesorService.signinP(body).subscribe( res => this.router.navigate(['/admin/inicioA']), (error) =>
                                                   this.alertService.makeNotification('error', 'Nombre y/o contraseña incorrecta!', error.error.message));
       }
+*/
+    }else{
+      this.profesorService.signinP(body).subscribe( res => this.router.navigate(['/profesor/inicioP']), (error) =>
+                                                  this.alertService.makeNotification('error', 'Nombre y/o contraseña incorrecta!', error.error.message));
+      }
+
+    }
+
+        
   }
 
 }
