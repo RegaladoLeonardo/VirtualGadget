@@ -49,6 +49,7 @@ export class ProfesorService{
 
               const { rows, tokenReadyL } = res;
                 console.log('hola');
+                //console.log('valido: '+ rows.profename);
 /*
                 const {message, rows, tokenReadyL } = res;
                 localStorage.setItem('token', tokenReadyL);

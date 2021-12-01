@@ -6,6 +6,8 @@ import { AlumnoService } from 'src/app/core/services/alumno.service';
 import { Router } from '@angular/router';
 import { AlertService } from 'src/app/core/services/alert.service';
 import { ProfesorService } from '../../../../core/services/profesor.service';
+import { AdminService } from 'src/app/core/services/admin.service';
+
 
 @Component({
   selector: 'app-singin',
@@ -31,6 +33,7 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
     private router: Router,
     private alertService: AlertService,
     private profesorService: ProfesorService,
+    private adminService: AdminService
   ) {
     this.makeForm();
     this.makeFormP();
@@ -115,7 +118,7 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
     this.sumbited = true;
     if(this.formp.valid){
       const {...body } = this.formp.value;
-  
+
   console.log('COMPARARE '+body.usernamep );
     if(body.usernamep  == 'Admin90E7'){
 /*
@@ -130,7 +133,7 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
 
     }
 
-        
+
   }
 
 }

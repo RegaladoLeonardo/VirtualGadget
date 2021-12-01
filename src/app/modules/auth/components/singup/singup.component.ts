@@ -47,7 +47,7 @@ export class SingupComponent {
       apellidom: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z ]+$/)]),
       fechaNac: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      valor: new FormControl(1)
+      valor: new FormControl(2)
     })
     return this.form
   }

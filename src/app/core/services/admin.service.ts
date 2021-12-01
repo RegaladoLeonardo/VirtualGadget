@@ -30,6 +30,10 @@ export class AdminService{
               tap((res: any) => {
 
                 const {message, rows, tokenReadyL } = res;
+
+                console.log(tokenReadyL);
+                console.log('admin: '+ rows.adminN);
+
                 /*
 
                 let alumno = JSON.parse(JSON.stringify(rows[0]));

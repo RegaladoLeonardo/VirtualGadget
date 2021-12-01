@@ -34,11 +34,14 @@ section .color:nth-child(3){
 }
 .box{
   position: relative;
+  flex-wrap: wrap;
+
 }
 
 
 .message-erro{
   color:red;
+
 }
 
 
