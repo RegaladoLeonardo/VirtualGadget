@@ -13,6 +13,7 @@ export class FtutorialComponent implements OnInit {
 
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
+  thirdFormGroup!: FormGroup;
 
   items: any = [''];
 
@@ -30,6 +31,9 @@ export class FtutorialComponent implements OnInit {
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required],
     });
+    this.thirdFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required],
+    })
   }
 
 

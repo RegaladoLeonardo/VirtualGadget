@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatAComponent implements OnInit {
 
-  name: string = "VirtualUsu"
-  url: string = 'https://chats-virtualgadget.herokuapp.com/catch?name='+ name;
+  private name = localStorage.getItem('usuario');
+  url: string = 'https://chats-virtualgadget.herokuapp.com/catch?name='+ this.name;
 
   public linkCss: Element | null;
   constructor() {

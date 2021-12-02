@@ -40,7 +40,10 @@ export class AlumnoService{
                   return true;
                   */
                   console.log('Usu:'+ Usu.usuario);
+
+
                   localStorage.setItem('token',tokenReady);
+                  localStorage.setItem('usuario', Usu.usuario);
                   })
               )
 
@@ -51,9 +54,10 @@ export class AlumnoService{
                 const {message, rows, tokenReadyL } = res;
 
                 let alumno = JSON.parse(JSON.stringify(rows[0]));
+                console.log(alumno);
 
                 localStorage.setItem('token', tokenReadyL);
-                localStorage.setItem('username', alumno.username);
+                localStorage.setItem('usuario', rows.usuario);
                 console.log('Username recibido: '+ rows.usuario);
                 this.store.setStore({  auth: true, token: tokenReadyL, ...rows});
 

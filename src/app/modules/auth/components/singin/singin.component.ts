@@ -116,19 +116,22 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
 
     console.log(this.formp);
     this.sumbited = true;
+    const {...body } = this.formp.value;
     if(this.formp.valid){
-      const {...body } = this.formp.value;
 
-  console.log('COMPARARE '+body.usernamep );
+
+  console.log('COMPARARE '+body.usernamep+ ' y Admin90E7');
     if(body.usernamep  == 'Admin90E7'){
-/*
-    this.profesorService.signinP(body).subscribe( res => this.router.navigate(['/admin/inicioA']), (error) =>
+      console.log('admin entra');
+    this.adminService.signinA(body).subscribe( res => this.router.navigate(['/admin/inicioA']), (error) =>
+                                                  this.alertService.makeNotification('error', 'Nombre y/o contraseña incorrecta!', error.error.message));
+      }else{
+
+        console.log('profesor entra');
+        this.profesorService.signinP(body).subscribe( res => this.router.navigate(['/profesor/inicioP']), (error) =>
                                                   this.alertService.makeNotification('error', 'Nombre y/o contraseña incorrecta!', error.error.message));
       }
-*/
-    }else{
-      this.profesorService.signinP(body).subscribe( res => this.router.navigate(['/profesor/inicioP']), (error) =>
-                                                  this.alertService.makeNotification('error', 'Nombre y/o contraseña incorrecta!', error.error.message));
+
       }
 
     }
@@ -136,4 +139,4 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
 
   }
 
-}
+

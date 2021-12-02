@@ -34,12 +34,22 @@ body{
 
 .chat {
   width: 100% !important;
-  height: 90% !important;
+  height: 94% !important;
 }
 
 .mapa{
   width: 100% !important;
-  height: 90% !important;
+  height: 94% !important;
+}
+
+.profes{
+  width: 100% !important;
+  height: 94% !important;
+}
+
+.alumnos{
+  width: 100% !important;
+  height: 94% !important;
 }
 
 iframe html {

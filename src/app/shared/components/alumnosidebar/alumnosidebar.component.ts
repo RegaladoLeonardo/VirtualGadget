@@ -22,17 +22,15 @@ export class AlumnosidebarComponent implements OnInit {
   constructor(
     private store: Store
   ) {
-    console.log('Del sidebar: '+ localStorage.getItem('username'));
+    console.log('Del sidebar: '+ localStorage.getItem('usuario'));
     this.storeSub = this.store.getObservable.subscribe((store) => {
       this.state = store;
       //this.username = store.username;
 
 
     })
-    this.username = localStorage.getItem('username');
+    this.username = localStorage.getItem('usuario');
 
-    console.log("Este es el username");
-    console.log(": "+ this.username);
    }
 
   ngOnInit(): void {
