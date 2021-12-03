@@ -5,6 +5,7 @@
   <div #wrapper id="page-content-wrapper">
     <app-alumnonavbar></app-alumnonavbar>
 
+    <section>
     <h2 align="center">TUTORIAL 1</h2>
 
     <p align="center">Dentro de este diagrama de flujo se muestra de manera general y secuencial las operaciones dentro del proceso de almacenamiento, producción y ventas de la empresa TAZICAF, desde que se recibe la materia prima hasta que se vende el producto terminado. </p>
@@ -15,6 +16,7 @@
       <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
           <ng-template matStepLabel><h2>Dato de entrada</h2></ng-template>
+
           <p align="center">Coloca la imagen en el campo</p>
           <!-- contenido del paso -->
           <div cdkDropListGroup>
@@ -145,7 +147,7 @@
     </div>
 
 
-
+  </section>
     <!--
 
 

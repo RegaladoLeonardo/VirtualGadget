@@ -33,17 +33,23 @@ export class AlumnoService{
                   console.log(tokenReady);
                   //console.log('del verify: '+ resultadoT);
 
-                  this.store.setStore({  auth: true, token: tokenReady, ...Usu});
+                  this.store.setStore({  auth: true, token: tokenReady, valor: Usu.valor});
                   /*
                   this.saveToken(token, remember);
                   this.store.dispatch(login({ user, token }));
                   return true;
                   */
-                  console.log('Usu:'+ Usu.usuario);
+                  console.log('Usu:'+ Usu.usuario+'y valor '+ Usu.valor);
+                  console.log('nombre: '+ Usu.nombre);
 
 
                   localStorage.setItem('token',tokenReady);
                   localStorage.setItem('usuario', Usu.usuario);
+                  localStorage.setItem('nombre', Usu.nombre);
+                  localStorage.setItem('app', Usu.app);
+                  localStorage.setItem('apm', Usu.apm);
+                  localStorage.setItem('email', Usu.email);
+                  localStorage.setItem('fechaNac', Usu.fechadenacimiento);
                   })
               )
 
@@ -61,8 +67,8 @@ export class AlumnoService{
                 console.log('Username recibido: '+ rows.usuario);
                 this.store.setStore({  auth: true, token: tokenReadyL, ...rows});
 
-                console.log("mensaje: "+message);
-                console.log('rows'+ JSON.parse(JSON.stringify(rows)) );
+                console.log("nombre: "+ rows.nombre);
+                //console.log('rows'+ JSON.parse(JSON.stringify(rows)) );
 
                 })
             )

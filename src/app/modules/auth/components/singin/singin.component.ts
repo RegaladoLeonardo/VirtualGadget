@@ -21,7 +21,10 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
   public state: any;
   public form!: FormGroup;
   public formp!: FormGroup;
+  public forma!: FormGroup;
   public sumbited: boolean = false;
+  public sumbited1: boolean = false;
+  public submitted2: boolean = false;
   token: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdkZmdkZmciLCJpYXQiOjE2MzgxNzMwNTYsImV4cCI6MTYzODIxNjI1Nn0.FlZpwHXxtVZP_XJfKh4VLcq0w2vi4ykCC0lEcKvf9rQ';
 
   constructor(
@@ -29,6 +32,7 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
     private store: Store,
     private fb: FormBuilder,
     private fp: FormBuilder,
+    private fa: FormBuilder,
     private alumnoService: AlumnoService,
     private router: Router,
     private alertService: AlertService,
@@ -37,6 +41,8 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
   ) {
     this.makeForm();
     this.makeFormP();
+    this.makeFormA();
+
     this.linkCss = document.querySelector('#style-global');
     this.linkCss?.setAttribute('href', './assets/styles/home.css');
     this.storeSub = this.store.getObservable.subscribe((store) => {
@@ -66,9 +72,22 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   public hasErrorP(field: string) {
-    const control = this.formp.get(field);
-    return control?.invalid && (control.touched || this.sumbited);
+    const controlp = this.formp.get(field);
+    return controlp?.invalid && (controlp.touched || this.sumbited1);
   }
+
+  public makeFormA(): void {
+    this.forma = this.fa.group({
+      usernamea: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z ]+$/)]),
+      passworda: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z ]+$/)])
+    })
+  }
+
+  public hasErrorA(field: string) {
+    const controla = this.forma.get(field);
+    return controla?.invalid && (controla.touched || this.submitted2);
+  }
+
 
 /*
   public click() {
@@ -99,38 +118,39 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
   this.sumbited = true;
   if(this.form.valid){
     const {...body } = this.form.value;
-/*
-    localStorage.setItem('token', this.token);
-
-    this.alumnoService.verify(localStorage.getItem('token')).subscribe( res => this.router.navigate(['/alumno/inicio']), (error) =>
-                                              this.alertService.makeNotification('error', 'Error', error.error.message));
-*/
-
       this.alumnoService.signin(body).subscribe( res => this.router.navigate(['/alumno/inicio']), (error) =>
                                                 this.alertService.makeNotification('error', '¡Usuario y/o contraseña incorrecta!', error.error.message));
     }
 }
 
 
+
+
+onSubmitA(): void {
+
+  console.log(this.forma);
+  this.submitted2 = true;
+  if(this.forma.valid){
+    const {...body } = this.forma.value;
+
+this.adminService.signinA(body).subscribe( res => this.router.navigate(['/admin/inicioA']), (error) =>
+                                                  this.alertService.makeNotification('error', 'Nombre y/o contraseña incorrecta!', error.error.message));
+
+}
+}
+
+
   onSubmitP(): void {
 
     console.log(this.formp);
-    this.sumbited = true;
+    this.sumbited1 = true;
     const {...body } = this.formp.value;
     if(this.formp.valid){
-
-
-  console.log('COMPARARE '+body.usernamep+ ' y Admin90E7');
-    if(body.usernamep  == 'Admin90E7'){
-      console.log('admin entra');
-    this.adminService.signinA(body).subscribe( res => this.router.navigate(['/admin/inicioA']), (error) =>
-                                                  this.alertService.makeNotification('error', 'Nombre y/o contraseña incorrecta!', error.error.message));
-      }else{
 
         console.log('profesor entra');
         this.profesorService.signinP(body).subscribe( res => this.router.navigate(['/profesor/inicioP']), (error) =>
                                                   this.alertService.makeNotification('error', 'Nombre y/o contraseña incorrecta!', error.error.message));
-      }
+
 
       }
 

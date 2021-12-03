@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilalumnoComponent implements OnInit {
 
+
+  usuario = localStorage.getItem('usuario');
+  nombre = localStorage.getItem('nombre');
+  app = localStorage.getItem('app');
+  apm = localStorage.getItem('apm');
+  email = localStorage.getItem('email');
+  password = localStorage.getItem('password');
+  fechaNac = localStorage.getItem('fechaNac');
   constructor() { }
 
   ngOnInit(): void {

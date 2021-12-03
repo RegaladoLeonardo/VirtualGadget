@@ -31,7 +31,7 @@ export class AdminService{
 
                 const {message, rows, tokenReadyL } = res;
 
-                console.log(tokenReadyL);
+                //console.log(tokenReadyL);
                 console.log('admin: '+ rows.adminN);
 
                 /*

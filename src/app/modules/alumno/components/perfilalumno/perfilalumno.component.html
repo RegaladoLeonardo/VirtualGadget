@@ -6,8 +6,38 @@
   <!-- Page Content -->
   <div #wrapper id="page-content-wrapper">
     <app-alumnonavbar></app-alumnonavbar>
-    <p>perfilalumno works!</p>
-    <div class="container-fluid content-wrapper">
+
+
+    <section>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="box">
+          <div class="square" style="--i:0"></div>
+          <div class="square" style="--i:1"></div>
+          <div class="square" style="--i:2"></div>
+          <div class="square" style="--i:3"></div>
+          <div class="square" style="--i:4"></div>
+
+          <div class="container">
+              <img src="../../../../../assets/img/perfil.png" width="110px">
+              <h2>Perfil</h2>
+              <ul>
+                  <li>Usuario: {{usuario}}</li>
+                  <li>Nombre: {{nombre}}</li>
+                  <li>Apellido Paterno: {{app}}</li>
+                  <li>Apellido materno: {{apm}}</li>
+                  <li>Email: {{email}}</li>
+                  <li>Fecha de Nacimiento: {{fechaNac}}</li>
+                  <li>Puntajes obtenidos: </li>
+              </ul>
+
+
+          </div>
+      </div>
+  </section>
+
+        <div class="container-fluid content-wrapper">
     </div>
     <!--
       <app-footer></app-footer>

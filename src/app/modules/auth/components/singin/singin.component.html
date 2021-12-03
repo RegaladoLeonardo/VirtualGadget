@@ -29,7 +29,11 @@
     <div class="square" style="--i:2"></div>
     <div class="square" style="--i:3"></div>
     <div class="square" style="--i:4"></div>
+
+
     <div class="container">
+
+
       <div class="form">
         <h2>Inicia Sesion Alumno</h2>
         <form [formGroup]="form"
@@ -86,14 +90,47 @@
             <a href=".#"  routerLink="/alumno/inicio" ><button type="submit">Ingresar Alumno</button></a>
             -->
             <button class="button-cfe-full" type="submit" >Iniciar Sesion</button>
-
           </div>
 
         </form>
       </div>
 
-
-
     </div>
+
+
+
+
+    <div class="container">
+      <div class="form">
+        <h2>Inicia Sesion Administrador</h2>
+        <form [formGroup]="forma"
+        (ngSubmit)="onSubmitA()">
+
+          <div class="inputBox">
+            <input formControlName="usernamea" type="text" placeholder="Usuario">
+            <div *ngIf=" hasErrorP('usernamea') " class="message-error">
+              <p class="message-erro"> Dato incorrecto </p>
+            </div>
+          </div>
+          <div class="inputBox">
+            <input formControlName="passworda" type="password" placeholder="Contraseña">
+            <div *ngIf=" hasErrorP('passworda') " class="message-error">
+              <p class="message-erro"> Dato incorrecto </p>
+            </div>
+          </div>
+          <div class="inputBox2">
+            <!--
+            <a href=".#"  routerLink="/alumno/inicio" ><button type="submit">Ingresar Alumno</button></a>
+            -->
+            <button class="button-cfe-full" routerLink="/admin/inicioA" >Iniciar Sesion</button>
+
+          </div>
+
+        </form>
+      </div>
+      </div>
+
+
+
   </div>
 </section>
