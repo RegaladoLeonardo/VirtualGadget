@@ -27,7 +27,7 @@ export class AlumnoService{
 
 
   public singup = (data: any): Observable<any> =>
-              this.http.post(`${this.url1}/signup`, data).pipe(
+              this.http.post(`${this.url1}/agregarusuarioLog`, data).pipe(
                 tap((res: any) => {
                   const { tokenReady, Usu } = res;
                   console.log(tokenReady);
@@ -38,18 +38,25 @@ export class AlumnoService{
                   this.saveToken(token, remember);
                   this.store.dispatch(login({ user, token }));
                   return true;
+
                   */
+                 //let alumno = JSON.parse(JSON.stringify(Usu));
+                 let alumno = Usu[0];
+                 console.log(alumno);
                   console.log('Usu:'+ Usu.usuario+'y valor '+ Usu.valor);
-                  console.log('nombre: '+ Usu.nombre);
+                  console.log('nombre: '+ Usu.usuario);
+                  console.log('id: '+ alumno.id_usuario);
 
-
-                  localStorage.setItem('token',tokenReady);
-                  localStorage.setItem('usuario', Usu.usuario);
-                  localStorage.setItem('nombre', Usu.nombre);
-                  localStorage.setItem('app', Usu.app);
-                  localStorage.setItem('apm', Usu.apm);
-                  localStorage.setItem('email', Usu.email);
-                  localStorage.setItem('fechaNac', Usu.fechadenacimiento);
+                  localStorage.setItem('token', tokenReady);
+                localStorage.setItem('usuario', alumno.usuario);
+                localStorage.setItem('nombre', alumno.nombre);
+                  localStorage.setItem('app', alumno.app);
+                  localStorage.setItem('apm', alumno.apm);
+                  localStorage.setItem('email', alumno.email);
+                  localStorage.setItem('fechaNac', alumno.fechadenacimiento);
+                  localStorage.setItem('id', alumno.id_usuario);
+                  console.log('id2: '+ localStorage.getItem('id'));
+                  localStorage.setItem('fechaNac', Usu.fechaNac);
                   })
               )
 
@@ -57,17 +64,23 @@ export class AlumnoService{
             this.http.post(`${this.url1}/signin`, data).pipe(
               tap((res: any) => {
 
-                const {message, rows, tokenReadyL } = res;
+                const {message, row, tokenReadyL}= res;
 
-                let alumno = JSON.parse(JSON.stringify(rows[0]));
+                let alumno = JSON.parse(JSON.stringify(row[0]));
                 console.log(alumno);
 
                 localStorage.setItem('token', tokenReadyL);
-                localStorage.setItem('usuario', rows.usuario);
-                console.log('Username recibido: '+ rows.usuario);
-                this.store.setStore({  auth: true, token: tokenReadyL, ...rows});
+                localStorage.setItem('usuario', alumno.usuario);
+                localStorage.setItem('nombre', alumno.nombre);
+                  localStorage.setItem('app', alumno.app);
+                  localStorage.setItem('apm', alumno.apm);
+                  localStorage.setItem('email', alumno.email);
+                  localStorage.setItem('fechaNac', alumno.fechadenacimiento);
+                  localStorage.setItem('id', alumno.id_usuario);
 
-                console.log("nombre: "+ rows.nombre);
+                this.store.setStore({  auth: true, token: tokenReadyL, ...row});
+
+                console.log("nombre: "+ alumno.nombre);
                 //console.log('rows'+ JSON.parse(JSON.stringify(rows)) );
 
                 })

@@ -54,8 +54,8 @@ export class SinginComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public makeForm(): void {
     this.form = this.fb.group({
-      usuario: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z ]+$/)]),
-      contraseña: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z ]+$/)])
+      usuario: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z\u00f1\u00d1 ]+$/)]),
+      contraseña: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-Z\u00f1\u00d1 ]+$/)])
     })
   }
 

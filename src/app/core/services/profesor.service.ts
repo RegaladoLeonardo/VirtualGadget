@@ -47,17 +47,29 @@ export class ProfesorService{
             this.http.post(`${this.url1}/signinp`, data).pipe(
               tap((res: any) => {
 
-              const { rows, tokenReadyL } = res;
+               const { row, tokenReadyL } = res;
                 console.log('hola');
                 //console.log('valido: '+ rows.profename);
-/*
+                /*
                 const {message, rows, tokenReadyL } = res;
                 localStorage.setItem('token', tokenReadyL);
 
                 console.log("mensaje: "+message);
                 console.log('rows'+ JSON.parse(JSON.stringify(rows)) );
                 */
+                let alumno = JSON.parse(JSON.stringify(row[0]));
+                console.log(alumno);
 
+                localStorage.setItem('token', tokenReadyL);
+                localStorage.setItem('id_profe', alumno.id_profe);
+                localStorage.setItem('usuario', alumno.profename);
+                localStorage.setItem('nombre', alumno.nombrep);
+                  localStorage.setItem('app', alumno.appp);
+                  localStorage.setItem('apm', alumno.apmp);
+                  localStorage.setItem('email', alumno.emailp);
+                  localStorage.setItem('fechaNac', alumno.fechadenacimientop);
+                console.log('profe id: ' + localStorage.getItem('id_profe'));
+                console.log('profe : ' + localStorage.getItem('usuario'));
 
                 })
             )

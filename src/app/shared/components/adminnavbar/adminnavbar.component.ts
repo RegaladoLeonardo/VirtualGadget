@@ -17,6 +17,7 @@ export class AdminnavbarComponent implements OnInit {
 
   public logout = (): void => {
     localStorage.clear();
+
   }
 
 

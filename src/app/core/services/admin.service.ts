@@ -29,27 +29,48 @@ export class AdminService{
             this.http.post(`${this.url1}/signinA`, data).pipe(
               tap((res: any) => {
 
-                const {message, rows, tokenReadyL } = res;
+                let stat: string = 'true';
+                const {message, admin, tokenReadyL } = res;
+
+
+                localStorage.setItem('token', tokenReadyL);
+                localStorage.setItem('valor',admin.valor)
+                localStorage.setItem('name', admin.AdminN)
+                /*
+                console.log('tokenadmin: '+ tokenReadyL );
+                localStorage.setItem('valor',rows)
 
                 //console.log(tokenReadyL);
                 console.log('admin: '+ rows.adminN);
-
-                /*
-
-                let alumno = JSON.parse(JSON.stringify(rows[0]));
-
-                localStorage.setItem('token', tokenReadyL);
-                localStorage.setItem('username', alumno.username);
-                console.log('Username recibido: '+ rows.usuario);
-                this.store.setStore({  auth: true, token: tokenReadyL, ...rows});
-
-                console.log("mensaje: "+message);
-                console.log('rows'+ JSON.parse(JSON.stringify(rows)) );
-                */
+                localStorage.setItem('status', stat)
+*/
+                console.log('token del admin: '+ localStorage.getItem('token'));
+                console.log('valor: '+ localStorage.getItem('valor'));
 
                 })
             )
 
+
+            public verify = (token: any): Observable<any> => {
+
+              //const headers = new HttpHeaders({token});
+              return this.http.get(`${this.url1}/verifyToken`, token ).pipe(
+                tap((res: any) => {
+
+                  const { token } = res;
+
+                  console.log('nuevo token: '+ token);
+                  /*
+                  const { resultadoT } =  res;
+
+                  res.status(200);
+                  console.log('res: '+res);
+                  console.log('resultado: '+ resultadoT);
+                  */
+                })
+
+                )
+            }
 /*
   public verify = (token: any): Observable<any> => {
 

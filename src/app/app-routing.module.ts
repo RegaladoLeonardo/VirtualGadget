@@ -11,13 +11,13 @@ const routes: Routes = [
   {
     path: 'alumno',
     loadChildren: (): Promise<any> => import('./modules/alumno/alumno-routing.module').then( module => module.InicioRoutingModule ),
-    canLoad: [AuthGuard]
+    //canLoad: [AuthGuard]
   },
 
   {
     path:'profesor',
     loadChildren: (): Promise<any> => import('./modules/profesor/profesor-routing.module').then( module => module.IniciopRoutingModule),
-    canLoad: [AuthGuard]
+    //canLoad: [AuthGuard]
   },
   {
     path: 'admin',

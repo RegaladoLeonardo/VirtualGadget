@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class EscenariospComponent implements OnInit {
 
   private id_profe = localStorage.getItem('id_profe');
+
   url: string = 'https://escenarios-virtualgadget.herokuapp.com/getEscenarioListPr?id_profe='+ this.id_profe;
 
   public linkCss: Element | null;

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminsidebarComponent implements OnInit {
 
+  name: string | null = localStorage.getItem('name');
   constructor() { }
 
   ngOnInit(): void {

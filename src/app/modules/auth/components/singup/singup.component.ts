@@ -1,9 +1,9 @@
 
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators  } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { Store } from 'src/app/core/store/store';
 import { AlertService } from '../../../../core/services/alert.service'
-
+//import {message} from '../../../../core/services'
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { AlumnoService } from '../../../../core/services/alumno.service';
 import { Router } from '@angular/router';
@@ -62,7 +62,7 @@ export class SingupComponent {
 
 
       this.alumnoService.singup(body).subscribe( res => this.router.navigate(['/alumno/inicio']), (error) =>
-                                                this.alertService.makeNotification('error', 'Error', error.error.message));
+                                                this.alertService.makeNotification('error', 'Error: '+error.message, error.error?.message));
 
     }
 
