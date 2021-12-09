@@ -26,6 +26,17 @@ export class AlumnoService{
   }
 
 
+  public puntuaciones = (calf: any): Observable<any> =>
+            this.http.post(`${this.url1}/signin`, calf).pipe(
+              tap((res: any) => {
+
+                const { nota } = res.json();
+                console.log('notas: '+ nota);
+                })
+            )
+
+
+
   public singup = (data: any): Observable<any> =>
               this.http.post(`${this.url1}/agregarusuarioLog`, data).pipe(
                 tap((res: any) => {
@@ -57,6 +68,7 @@ export class AlumnoService{
                   localStorage.setItem('id', alumno.id_usuario);
                   console.log('id2: '+ localStorage.getItem('id'));
                   localStorage.setItem('fechaNac', Usu.fechaNac);
+                  localStorage.setItem('valor', alumno.valor);
                   })
               )
 
@@ -77,6 +89,7 @@ export class AlumnoService{
                   localStorage.setItem('email', alumno.email);
                   localStorage.setItem('fechaNac', alumno.fechadenacimiento);
                   localStorage.setItem('id', alumno.id_usuario);
+                  localStorage.setItem('valor', alumno.valor);
 
                 this.store.setStore({  auth: true, token: tokenReadyL, ...row});
 

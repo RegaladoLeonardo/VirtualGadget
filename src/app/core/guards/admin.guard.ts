@@ -24,6 +24,15 @@ export class AdminGuard implements CanLoad, CanActivate {
   ): Observable<boolean> | Promise<boolean> | boolean {
 
 
+    if(localStorage.length > 0 && localStorage.getItem('valor')=='1'){
+      console.log('Hay alguien logeado');
+      let token  = localStorage.getItem('token');
+
+      console.log('Token para verificar: '+ token );
+    }else{
+      this.router.navigateByUrl('/auth/login');
+      console.log('no hay alguien logeado');
+    }
 
      return true;
   }

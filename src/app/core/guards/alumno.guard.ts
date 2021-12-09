@@ -2,27 +2,29 @@ import { Injectable } from "@angular/core";
 import { ActivatedRouteSnapshot, CanActivate, CanLoad, Route, RouterStateSnapshot } from "@angular/router";
 import { Observable } from "rxjs";
 import { Router } from '@angular/router';
-import { AdminService } from "../services/admin.service";
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanLoad, CanActivate {
 
+export class AlumnoGuard implements CanLoad, CanActivate {
+/*
+  username: string =  'Admin90E7';
+  password: string = 'VGproyecto9';
+*/
   constructor(
-    private router: Router,
-    private adminService: AdminService
-  ) {}
+    private router: Router
+  ){
+
+  }
+
 
   canLoad(
-    route: Route
+    route: Route,
   ): Observable<boolean> | Promise<boolean> | boolean {
-    /*
-      Logica
-      Si esta logeado
-    */
 
-    if(localStorage.length > 0 && localStorage.getItem('valor')=='3'){
+
+    if(localStorage.length > 0 && localStorage.getItem('valor')=='2'){
       console.log('Hay alguien logeado');
       let token  = localStorage.getItem('token');
 
@@ -31,14 +33,12 @@ export class AuthGuard implements CanLoad, CanActivate {
       this.router.navigateByUrl('/auth/login');
       console.log('no hay alguien logeado');
     }
-      //this.router.navigateByUrl('/auth/login');
-    return true;
-  }
 
+     return true;
+  }
 
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     return true;
   }
-
 }

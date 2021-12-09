@@ -67,9 +67,11 @@ export class ProfesorService{
                   localStorage.setItem('app', alumno.appp);
                   localStorage.setItem('apm', alumno.apmp);
                   localStorage.setItem('email', alumno.emailp);
+                  localStorage.setItem('valor',alumno.valor)
                   localStorage.setItem('fechaNac', alumno.fechadenacimientop);
                 console.log('profe id: ' + localStorage.getItem('id_profe'));
                 console.log('profe : ' + localStorage.getItem('usuario'));
+                console.log('valor: ' + localStorage.getItem('valor'));
 
                 })
             )
