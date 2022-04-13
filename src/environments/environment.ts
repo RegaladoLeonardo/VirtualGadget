@@ -3,9 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  url:  ['http://localhost:4200','http://localhost:4090']
-  //url:  ['http://localhost:4200','http://localhost:3800/rutas']http://localhost:4090/
+  production: true,
+  url:  ['http://localhost:4200','http://login-virtualgadget.herokuapp.com' ]
+  // https://nodeapplog.herokuapp.com
+  //https://node-weblog.herokuapp.com/
+
+  //url:  ['http://localhost:4200','http://localhost:380 8''''¿0/rutas']//http://localhost:4090/
 };
 
 /*
