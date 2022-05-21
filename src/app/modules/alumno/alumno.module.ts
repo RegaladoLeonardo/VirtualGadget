@@ -13,6 +13,7 @@ import { ChatAComponent } from './components/chat-a/chat-a.component';
 import { EscenariosaComponent } from './components/escenariosa/escenariosa.component';
 import { CuestionariosaComponent } from './components/cuestionariosa/cuestionariosa.component';
 import { PipeModule } from '../../shared/pipes/pipe.module';
+import { BibliotecaComponent } from './components/biblioteca/biblioteca.component';
 
 @NgModule({
 
@@ -24,7 +25,8 @@ import { PipeModule } from '../../shared/pipes/pipe.module';
     StutorialComponent,
     ChatAComponent,
     EscenariosaComponent,
-    CuestionariosaComponent
+    CuestionariosaComponent,
+    BibliotecaComponent
   ],
   imports: [
     AuthModule,

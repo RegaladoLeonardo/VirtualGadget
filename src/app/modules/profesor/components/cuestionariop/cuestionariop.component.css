@@ -36,3 +36,8 @@ section .color:nth-child(3){
 .box{
   position: relative;
 }
+
+iframe{
+  width: 100vw;
+  height: 95vh;
+}

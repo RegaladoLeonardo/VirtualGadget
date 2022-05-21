@@ -1,174 +1,34 @@
 <link rel="shortcut icon" href="../../../../../assets/img/logo_small_icon_only_inverted.ico">
 <script src="https://kit.fontawesome.com/a78d4ea77b.js" crossorigin="anonymous"></script>
 
-<header>
-
-  <!--Logo-->
-
-  <a href="" class="logo"><span>Virtual</span>Gadget</a>
-  <input type="checkbox" id="menu-bar">
-  <label for="menu-bar" class="fas fa-bars"></label>
-
-  <!--Vinculos-->
-
-  <nav class="navbar">
-      <a href="#home">Inicio</a>
-      <a href="#conocenos">Conocenos</a>
-      <a href="#servicios">Servicios</a>
-      <a class="spectre" routerLink="/auth/login" >Spectre</a>
-  </nav>
-</header>
-
-<!--Bienvenida-->
-
-<section class="home" id="home">
-  <img src="/assets/img/logo_small_icon_only.svg" alt="">
-  <h1 class="text"><span>Virtual</span>Gadget</h1>
+<section class="body">
+  <header>
+    <!--Logo-->
+    <a href="./index.html" class="logo"><span>Virtual</span>Gadget</a>
+    <!--Vinculos-->
+  </header>
+  <section>
+    <div class="box">
+        <h1 id="titulo">Bienvenidos</h1>
+        <div class="wrapper">
+            <h3>"Hazlo Virtual"</h3>
+        </div>
+        <div class="container">
+              <a class="spectre" routerLink="/auth/empresa" >
+                <div class="box-2">
+                    <div class="btn btn-two">
+                      <span>Conocenos</span>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/auth/login">
+                <div class="box-2">
+                    <div class="btn btn-3">
+                      <span>Spektre</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+  </section>
 </section>
-
-<!--Conocenos-->
-
-<section class="conocenos" id="conocenos">
-  <h1 class="heading">Conocenos</h1>
-  <div class="column">
-      <div class="image">
-          <img src="/assets/img/undraw_online_test_gba7.svg" alt="">
-      </div>
-      <div class="content">
-          <h3>Quienes somos</h3>
-          <p>Una empresa totalmente responsable en su trabajo dedicada a mejorar la salud de los clientes haciendo conciencia desde un ámbito tecnológico y Promover en la población el cuidado de la salud con ayuda de datos obtenidos mediante aplicaciones web, además de concientizar a las personas respecto a la importancia que tiene cuidado de su salud.</p>
-      </div>
-  </div>
-  <div class="column">
-      <div class="content">
-          <h3>Filosofia</h3>
-          <p>Somos un equipo de trabajo cuyo objetivo es mejorar las experiencias al momento de desarrollar programas, así como el aprendizaje de la programación </p>
-      </div>
-      <div class="image">
-          <img src="/assets/img/undraw_visualization_c2ps (3).svg" alt="">
-      </div>
-  </div>
-  <div class="column">
-      <div class="image">
-          <img src="/assets/img/undraw_Project_completed_re_pqqq (1).svg" alt="">
-      </div>
-      <div class="content">
-          <h3>Objetivo</h3>
-          <p>Nuestro objetivo es hacer experiencias unicaspara los usuarios, asi como ayudar a la comprensión de la tecnologia</p>
-      </div>
-  </div>
-</section>
-
-<!--Valores-->
-
-<section class="features" id="features">
-  <h1 class="heading">Valores</h1>
-  <div class="box-container">
-      <div *ngFor="let valor of valores" class="box1">
-          <h3> {{ valor.nombre }} </h3>
-          <p> {{ valor.desc }} </p>
-      </div>
-  </div>
-</section>
-
-<!--Servicios-->
-
-<section class="Servicios" id="Servicios">
-  <h1 class="heading">Servicios</h1>
-  <br>
-  <h2>Spectre</h2>
-  <div class="box-container">
-      <div class="box">
-          <h3 class="title">Diagramas de Flujo</h3>
-          <div class="price">$0
-              <span>de costo inicial</span>
-          </div>
-          <ul>
-              <li>
-                  <i class="fas fa-check"></i>Crea diagramas y simulaciones
-              </li>
-              <li>
-                  <i class="fas fa-check"></i>Crea diagramas y simulaciones
-              </li>
-              <li>
-                  <i class="fas fa-check"></i>Crea diagramas y simulaciones
-              </li>
-              <li>
-                  <i class="fas fa-check"></i>Crea diagramas y simulaciones
-              </li>
-              <li>
-                  <i class="fas fa-check"></i>Crea diagramas y simulaciones
-              </li>
-          </ul>
-          <button>Ingresar Ahora</button>
-      </div>
-      <div class="box">
-          <h3 class="title">Diagramas de Casos de uso</h3>
-          <div class="price">$0
-              <span>de costo inicial</span>
-          </div>
-          <ul>
-              <li>
-                  <i class="fas fa-check"></i>Crea diagramas y simulaciones
-              </li>
-              <li>
-                  <i class="fas fa-check"></i>Crea diagramas y simulaciones
-              </li>
-              <li>
-                  <i class="fas fa-check"></i>Crea diagramas y simulaciones
-              </li>
-              <li>
-                  <i class="fas fa-check"></i>Crea diagramas y simulaciones
-              </li>
-              <li>
-                  <i class="fas fa-check"></i>Crea diagramas y simulaciones
-              </li>
-          </ul>
-          <button>Ingresar Ahora</button>
-      </div>
-  </div>
-</section>
-<!--Footer-->
-<footer class="footer">
-  <div class="container">
-      <div class="row">
-          <div class="footer-col">
-              <h4>Compañia</h4>
-              <ul>
-                  <li><a href="#">Acerca de nosotros</a></li>
-                  <li><a href="#">Politicas de privacidad</a></li>
-              </ul>
-          </div>
-          <div class="footer-col">
-              <h4>¿Necesitas ayuda?</h4>
-              <ul>
-                  <li><a href="#">Inicio de sesion</a></li>
-                  <li><a href="#">Progreso</a></li>
-                  <li><a href="#">Status de solicitud</a></li>
-                  <li><a href="#">Otros problemas</a></li>
-              </ul>
-          </div>
-          <div class="footer-col">
-              <h4>Integrantes</h4>
-              <ul>
-                  <li>arana chavez emiliano</li>
-                  <li>de la cruz fuentes diego</li>
-                  <li>lizarraga anguiano jesus adrian</li>
-                  <li>nuñez manrique cuauhtemoc emmanuel</li>
-                  <li>orduña melendez arantza</li>
-                  <li>regalado zuñiga leonardo daniel</li>
-              </ul>
-          </div>
-          <div class="footer-col">
-              <h4>Siguenos</h4>
-              <div class="social-media">
-                  <ul>
-                      <li><p id=facebook><i class="fab fa-facebook-square fa-3x"></i>facebook</p></li>
-                      <li><p id="instagram"><i class="fab fa-instagram-square  fa-3x"></i>Instagram</p></li>
-                      <li><p id="twitter"><i class="fab fa-twitter-square fa-3x" ></i>Twitter</p></li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </div>
-</footer>

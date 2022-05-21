@@ -20,15 +20,15 @@ section .color{
 
 section .color:nth-child(1){
   top: -350px;
-  width: 800px;
-  height: 800px;
+  width: 150px;
+  height: 900px;
   background: #c88dff;
 }
 
 section .color:nth-child(2){
   bottom: -150px;
   left: 100px;
-  width: 550px;
+  width: 80px;
   height: 550px;
   background: #7ca5ff;
 }

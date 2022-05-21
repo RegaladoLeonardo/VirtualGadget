@@ -3,17 +3,17 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.component.html',
-  styleUrls: ['../../../../../assets/styles/fondo.css']
+  styleUrls: ['./principal.component.css']
 })
 export class PrincipalComponent implements OnInit {
 
-  public linkCss: Element | null;
+
+  public nombreUsu = localStorage.getItem('usuario');
   constructor() {
-    this.linkCss = document.querySelector('#style-global');
-    this.linkCss?.setAttribute('href', './assets/styles/fondo.css');
   }
 
   ngOnInit(): void {
   }
+
 
 }

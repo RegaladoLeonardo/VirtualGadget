@@ -1,3 +1,9 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
 
 <div class="d-flex" id="wrapper">
     <app-alumnosidebar></app-alumnosidebar>
@@ -7,11 +13,17 @@
     <div #wrapper id="page-content-wrapper">
       <app-alumnonavbar></app-alumnonavbar>
 
-      <section>
+      <section >
 
-      <h1>¡|BIENVENIDO A LA PAGINA ALUMNO!</h1>
-      </section>
+        <div class="contenido">
+            <img src="../../../../../assets/img/logoS1Oscuro.png" width="40%">
+
+            <h1>Bienvenido {{nombreUsu}}</h1>
+        </div>
+    </section>
+
       <!--
+        como?
 
       <iframe class="mapa" id="inlineFrameExample"
     title="Inline Frame Example"

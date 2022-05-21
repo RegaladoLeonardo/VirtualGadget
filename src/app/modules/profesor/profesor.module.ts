@@ -10,6 +10,7 @@ import { PerfilpComponent } from './components/perfilp/perfilp.component';
 import { EscenariospComponent } from './components/escenariosp/escenariosp.component';
 import { PipeModule } from '../../shared/pipes/pipe.module';
 import { CuestionariopComponent } from './components/cuestionariop/cuestionariop.component';
+import { BibliotecasComponent } from './components/bibliotecas/bibliotecas.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CuestionariopComponent } from './components/cuestionariop/cuestionariop
     ChatfComponent,
     PerfilpComponent,
     EscenariospComponent,
-    CuestionariopComponent
+    CuestionariopComponent,
+    BibliotecasComponent
     ],
   imports: [
     AuthModule,

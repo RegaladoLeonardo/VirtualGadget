@@ -1,0 +1,530 @@
+
+<header>
+  <a routerLink="">Virtual<span>Gadget</span></a>
+  <a routerLink="/auth/login">Spektre</a>
+</header>
+<div class="contenido">
+  <div class="objetos">
+      <div class="saludo">
+          <div class="text">
+              <h3>Bienvenido usuario</h3>
+              <h1>Este es el centro de
+              <br> ayuda de Virtual<span>Gadget</span>
+          </h1>
+          </div>
+      </div>
+
+      <div class="bienvenida">
+          <h3>Te damos la bienvenida</h3>
+          <p>Usuario, creamos este espacio para ayudarte a solucionar los problemas asi como las dudas que encuentres dentro de las aplicaciones creadas
+              por nuestro equipo. A continuación les presentamos un catálogo de las problematicas que han sido reportadas por los usuario y las que
+              han sido detectadas por el equipo de pruebas, si el problema no esta dentro de los problemas identificados, sigue los pasos que
+              se encuentran en la seccion <span>Nueva problematica</span>
+          </p>
+          <h3 class="app">Nuestras Aplicaciones</h3>
+      </div>
+
+      <section class="cuad">
+      </section>
+      <section class="Spektre" id="Spektre">
+          <h1>Spektre</h1>
+          <img src="../../../../../assets/img/logoSpektre.svg" width="300px">
+          <h3 class="ide">Problemas identificados</h3>
+          <div class="container">
+              <div class="card">
+                  <div class="algo">
+                      <img src="../../../../../assets/img/icons/clipboard-list-solid.svg" height="100px">
+                      <h3 class="titu">Registro</h3>
+                  </div>
+                  <div class="content">
+                      <h2>01</h2>
+                      <h3>Problemas conocidos</h3>
+                      <ul>
+                          <li>No permite registro por error en algun campo</li>
+                          <li>No permite el registro aun con campos completos</li>
+                      </ul>
+                      <a href="#registro">Solución</a>
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="algo">
+                      <img src="../../../../../assets/img/icons/user-solid.svg" height="100px">
+                      <h3 class="titu">Inicio de sesión</h3>
+                  </div>
+                  <div class="content">
+                      <h2>02</h2>
+                      <h3>Problemas conocidos</h3>
+                      <ul>
+                          <li>No permite ingresar por error en algun campo</li>
+                          <li>No permite el ingresar aun con campos completos</li>
+                      </ul>
+                      <a href="#login">Solución</a>
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="algo">
+                      <img src="../../../../../assets/img/icons/display-solid.svg" width="100px">
+                      <h3 class="titu">Interfaz</h3>
+                  </div>
+                  <div class="content">
+                      <h2>03</h2>
+                      <h3>Problemas conocidos</h3>
+                      <ul>
+                          <li>Tiempo de renderizado (fondo de pantalla)</li>
+                          <li>Bugs en Escenarios</li>
+                          <li>Pantallas cortadas</li>
+                      </ul>
+                      <a href="#interfaz">Solución</a>
+                  </div>
+              </div>
+              <div class="card">
+                  <h3 class="titu">Carga</h3>
+                  <div class="content">
+                      <h2>04</h2>
+                      <h3>Problemas conocidos</h3>
+                      <ul>
+                          <li>Tiempo de renderizado (funciones)</li>
+                          <li>Tiempo de reaccion (Escenarios)</li>
+                          <li>Envio de mensajes (Chat)</li>
+                      </ul>
+                      <a href="#carga">Solución</a>
+                  </div>
+              </div>
+              <div class="card">
+                  <h3 class="titu">Nueva problematica</h3>
+                  <div class="content">
+                      <h2>05</h2>
+                      <h3>Ayudanos</h3>
+                      <ul>
+                          <li>Si el problema que estas experimentando dentro de la
+                              aplicación no se encuentra en las tarjetas anteriores,
+                              sigue los siguientes pasos.
+                          </li>
+                      </ul>
+                      <a href="#np">Ir ahora</a>
+                  </div>
+              </div>
+          </div>
+
+          <h3 class="ide">Dudas</h3>
+
+          <div class="container">
+              <div class="card">
+                  <h3 class="titu">Profesor</h3>
+                  <div class="content">
+                      <h2>01</h2>
+                      <h3>Card one</h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi error,
+                          aliquid sequi totam doloremque cumque odit provident aut dicta.
+                      </p>
+                      <a href="#">Ir ahora</a>
+                  </div>
+              </div>
+              <div class="card">
+                  <h3 class="titu">Alumno</h3>
+                  <div class="content">
+                      <h2>02</h2>
+                      <h3>Card two</h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi error,
+                          aliquid sequi totam doloremque cumque odit provident aut dicta.
+                      </p>
+                      <a href="#">Ir ahora</a>
+                  </div>
+              </div>
+              <div class="card">
+                  <h3 class="titu">Administrador</h3>
+                  <div class="content">
+                      <h2>03</h2>
+                      <h3>Card three</h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi error,
+                          aliquid sequi totam doloremque cumque odit provident aut dicta.
+                      </p>
+                      <a href="#">Ir ahora</a>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section class="cuad2"></section>
+
+      <!--Problemas-->
+
+      <h3 class="Sd">Soluciones y descripción del problema</h3>
+
+
+      <section class="registro" id="registro">
+        <h2>Registro</h2>
+        <p>El registro es la sección perteneciente a la aplicación en la que puedes crear tu cuenta como
+            alumno, UNICAMENTE ESTA DISPONIBLE PARA ALUMNOS, por lo que ningun usuario que tenga un rango
+            diferente podrá registrarse en esta sección.
+        </p>
+        <p>A continuación te presentamos los problemas que fueron detectados y te pueden
+           suceder al utilizar esta sección, sigue las alternativas que hay en cada uno de los casos
+           para solucionar tu problema, en caso de que este persista, contactanos
+        </p>
+        <div class="quejas">
+            <div class="cont">
+                <div class="zona">
+                    <h3>No permite registro por error en algun campo</h3>
+                </div>
+                <div class="r1">
+                    <p>Los campos dentro del registro no aceptan ciertos formatos de caracteres,
+                        asi mismo solo se puede ingresar una cantidad de caracteres limitados,
+                        por lo que se recomienda lo siguiente:
+                    </p>
+                    <h4>Alternativa 1</h4>
+                    <p>Si el error esta en los campos <span>Nombre</span>, <span>Apellido Paterno</span>
+                        o <span>Apellido Materno</span>, verifica que no ingresaste caracteres especiales
+                        o numericos
+                    </p>
+                    <h4>Alternativa 2</h4>
+                    <p>Si el error esta en el campo <span>Email</span>, verifica que ingresaste el simbolo @ y que
+                        no hay espacios entre los caracteres.
+                    </p>
+                    <h4>Alternativa 3</h4>
+                    <p>A excepción de los campos <span>Email</span> y <span>Contraseña</span>, todos los restantes
+                        tienen un limite de caracteres que es mínimo 3 y máximo 5 caracteres, verifica que cada dato
+                        esta dentro del limite
+                    </p>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="zona">
+                    <h3>No permite el registro aun con campos completos</h3>
+                </div>
+                <div class="r1">
+                    <p>Los campos dentro del registro no permiten avanzar el proceso en caso de que el dato ingresado
+                        no cumpla con las características que cada uno solicita, en caso de que los datos esten correctos
+                        y no se procese la solicitud, se recomienda lo siguiente:
+                    </p>
+                    <h4>Alternativa 1</h4>
+                    <p>Verifica que tu conexión de internet permita la transferencia de datos, en caso de que la velocidad
+                        de tu servicio de internet no sea la optima, se recomienda posponer el registro hasta que su servico se
+                        haya regulado
+                    </p>
+                    <h4>Alternativa 2</h4>
+                    <p>Verifica que el campo <span>Acepto politicas y terminos de uso</span> este seleccionado, de lo contrario
+                        no se permitira continuar. <span>Importante, lee las politicas de privacidad y terminos de uso para el
+                        conocimiento de como manejamos tus datos dentro de la aplicación</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p>Si el problema continua, te recomendamos abrir la aplicación desde un navegador diferente o si estas en el
+            modo incognito, cerrarlo.
+            <br>
+            Recuerda que la forma de ingresar a la sección Registro, es por medio de la pagina de inicio Spektre,
+            asi mismo presionando en crear cuenta en la sección de inicio de sesión.
+            <br>
+            Despues de realizar tu registro debes recibir un correo con el usuario y contraseña que registrarste, no lo elimines
+            ya que te puede ser util en caso de que no recuerdes estos datos
+        </p>
+    </section>
+
+    <!--Inicio de sesion-->
+
+    <section class="login" id="login">
+        <h2>Inicio de sesión</h2>
+        <p>Con el inicio de sesión puedes acceder a la aplicación, esta se encuentra en la pagina de inicio Spektre, esta dividido
+            en tres secciones, una correspondiente a los profesores, otra a los alumnos y la ultima al administrador
+        </p>
+        <p>A continuación te presentamos los problemas que fueron detectados y te pueden
+            suceder al utilizar esta sección, sigue las alternativas que hay en cada uno de los casos
+            para solucionar tu problema, en caso de que este persista, contactanos
+         </p>
+         <div class="quejas">
+            <div class="cont">
+                <div class="zona">
+                    <h3>No permite ingresar por error en algun campo</h3>
+                </div>
+                <div class="r1">
+                    <p>Los campos dentro del registro no aceptan ciertos formatos de caracteres,
+                        asi mismo solo se puede ingresar una cantidad de caracteres limitados,
+                        por lo que se recomienda lo siguiente:
+                    </p>
+                    <h4>Alternativa 1</h4>
+                    <p>Si el error esta en los campos <span>Nombre</span>, <span>Apellido Paterno</span>
+                        o <span>Apellido Materno</span>, verifica que no ingresaste caracteres especiales
+                        o numericos
+                    </p>
+                    <h4>Alternativa 2</h4>
+                    <p>Si el error esta en el campo <span>Email</span>, verifica que ingresaste el simbolo @ y que
+                        no hay espacios entre los caracteres.
+                    </p>
+                    <h4>Alternativa 3</h4>
+                    <p>A excepción de los campos <span>Email</span> y <span>Contraseña</span>, todos los restantes
+                        tienen un limite de caracteres que es mínimo 3 y máximo 5 caracteres, verifica que cada dato
+                        esta dentro del limite
+                    </p>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="zona">
+                    <h3>No permite ingresar aun con campos completos</h3>
+                </div>
+                <div class="r1">
+                    <p>Los campos dentro del registro no permiten avanzar el proceso en caso de que el dato ingresado
+                        no cumpla con las características que cada uno solicita, en caso de que los datos esten correctos
+                        y no se procese la solicitud, se recomienda lo siguiente:
+                    </p>
+                    <h4>Alternativa 1</h4>
+                    <p>Verifica que tu conexión de internet permita la transferencia de datos, en caso de que la velocidad
+                        de tu servicio de internet no sea la optima, se recomienda posponer el registro hasta que su servico se
+                        haya regulado
+                    </p>
+                    <h4>Alternativa 2</h4>
+                    <p>Verifica que el campo <span>Acepto politicas y terminos de uso</span> este seleccionado, de lo contrario
+                        no se permitira continuar. <span>Importante, lee las politicas de privacidad y terminos de uso para el
+                        conocimiento de como manejamos tus datos dentro de la aplicación</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p>Con el inicio de sesión puedes acceder a la aplicación, esta se encuentra en la pagina de inicio Spektre, esta dividido
+            en tres secciones, una correspondiente a los profesores, otra a los alumnos y la ultima al administrador
+        </p>
+        <p>A continuación te presentamos los problemas que fueron detectados y te pueden
+            suceder al utilizar esta sección, sigue las alternativas que hay en cada uno de los casos
+            para solucionar tu problema, en caso de que este persista, contactanos
+         </p>
+    </section>
+
+    <!--Interfaz-->
+
+    <section class="interfaz" id="interfaz">
+        <h2>Interfaz</h2>
+        <p>Con el inicio de sesión puedes acceder a la aplicación, esta se encuentra en la pagina de inicio Spektre, esta dividido
+            en tres secciones, una correspondiente a los profesores, otra a los alumnos y la ultima al administrador
+        </p>
+        <p>A continuación te presentamos los problemas que fueron detectados y te pueden
+            suceder al utilizar esta sección, sigue las alternativas que hay en cada uno de los casos
+            para solucionar tu problema, en caso de que este persista, contactanos
+         </p>
+         <div class="quejas">
+            <div class="cont">
+                <div class="zona">
+                    <h3>No permite ingresar por error en algun campo</h3>
+                </div>
+                <div class="r1">
+                    <p>Los campos dentro del registro no aceptan ciertos formatos de caracteres,
+                        asi mismo solo se puede ingresar una cantidad de caracteres limitados,
+                        por lo que se recomienda lo siguiente:
+                    </p>
+                    <h4>Alternativa 1</h4>
+                    <p>Si el error esta en los campos <span>Nombre</span>, <span>Apellido Paterno</span>
+                        o <span>Apellido Materno</span>, verifica que no ingresaste caracteres especiales
+                        o numericos
+                    </p>
+                    <h4>Alternativa 2</h4>
+                    <p>Si el error esta en el campo <span>Email</span>, verifica que ingresaste el simbolo @ y que
+                        no hay espacios entre los caracteres.
+                    </p>
+                    <h4>Alternativa 3</h4>
+                    <p>A excepción de los campos <span>Email</span> y <span>Contraseña</span>, todos los restantes
+                        tienen un limite de caracteres que es mínimo 3 y máximo 5 caracteres, verifica que cada dato
+                        esta dentro del limite
+                    </p>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="zona">
+                    <h3>No permite ingresar aun con campos completos</h3>
+                </div>
+                <div class="r1">
+                    <p>Los campos dentro del registro no permiten avanzar el proceso en caso de que el dato ingresado
+                        no cumpla con las características que cada uno solicita, en caso de que los datos esten correctos
+                        y no se procese la solicitud, se recomienda lo siguiente:
+                    </p>
+                    <h4>Alternativa 1</h4>
+                    <p>Verifica que tu conexión de internet permita la transferencia de datos, en caso de que la velocidad
+                        de tu servicio de internet no sea la optima, se recomienda posponer el registro hasta que su servico se
+                        haya regulado
+                    </p>
+                    <h4>Alternativa 2</h4>
+                    <p>Verifica que el campo <span>Acepto politicas y terminos de uso</span> este seleccionado, de lo contrario
+                        no se permitira continuar. <span>Importante, lee las politicas de privacidad y terminos de uso para el
+                        conocimiento de como manejamos tus datos dentro de la aplicación</span>
+                    </p>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="zona">
+                    <h3>No permite ingresar por error en algun campo</h3>
+                </div>
+                <div class="r1">
+                    <p>Los campos dentro del registro no aceptan ciertos formatos de caracteres,
+                        asi mismo solo se puede ingresar una cantidad de caracteres limitados,
+                        por lo que se recomienda lo siguiente:
+                    </p>
+                    <h4>Alternativa 1</h4>
+                    <p>Si el error esta en los campos <span>Nombre</span>, <span>Apellido Paterno</span>
+                        o <span>Apellido Materno</span>, verifica que no ingresaste caracteres especiales
+                        o numericos
+                    </p>
+                    <h4>Alternativa 2</h4>
+                    <p>Si el error esta en el campo <span>Email</span>, verifica que ingresaste el simbolo @ y que
+                        no hay espacios entre los caracteres.
+                    </p>
+                    <h4>Alternativa 3</h4>
+                    <p>A excepción de los campos <span>Email</span> y <span>Contraseña</span>, todos los restantes
+                        tienen un limite de caracteres que es mínimo 3 y máximo 5 caracteres, verifica que cada dato
+                        esta dentro del limite
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p>Con el inicio de sesión puedes acceder a la aplicación, esta se encuentra en la pagina de inicio Spektre, esta dividido
+            en tres secciones, una correspondiente a los profesores, otra a los alumnos y la ultima al administrador
+        </p>
+        <p>A continuación te presentamos los problemas que fueron detectados y te pueden
+            suceder al utilizar esta sección, sigue las alternativas que hay en cada uno de los casos
+            para solucionar tu problema, en caso de que este persista, contactanos
+         </p>
+    </section>
+
+    <!--Carga-->
+
+    <section class="carga" id="carga">
+        <h2>Carga</h2>
+        <p>Con el inicio de sesión puedes acceder a la aplicación, esta se encuentra en la pagina de inicio Spektre, esta dividido
+            en tres secciones, una correspondiente a los profesores, otra a los alumnos y la ultima al administrador
+        </p>
+        <p>A continuación te presentamos los problemas que fueron detectados y te pueden
+            suceder al utilizar esta sección, sigue las alternativas que hay en cada uno de los casos
+            para solucionar tu problema, en caso de que este persista, contactanos
+         </p>
+         <div class="quejas">
+            <div class="cont">
+                <div class="zona">
+                    <h3>No permite ingresar por error en algun campo</h3>
+                </div>
+                <div class="r1">
+                    <p>Los campos dentro del registro no aceptan ciertos formatos de caracteres,
+                        asi mismo solo se puede ingresar una cantidad de caracteres limitados,
+                        por lo que se recomienda lo siguiente:
+                    </p>
+                    <h4>Alternativa 1</h4>
+                    <p>Si el error esta en los campos <span>Nombre</span>, <span>Apellido Paterno</span>
+                        o <span>Apellido Materno</span>, verifica que no ingresaste caracteres especiales
+                        o numericos
+                    </p>
+                    <h4>Alternativa 2</h4>
+                    <p>Si el error esta en el campo <span>Email</span>, verifica que ingresaste el simbolo @ y que
+                        no hay espacios entre los caracteres.
+                    </p>
+                    <h4>Alternativa 3</h4>
+                    <p>A excepción de los campos <span>Email</span> y <span>Contraseña</span>, todos los restantes
+                        tienen un limite de caracteres que es mínimo 3 y máximo 5 caracteres, verifica que cada dato
+                        esta dentro del limite
+                    </p>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="zona">
+                    <h3>No permite ingresar aun con campos completos</h3>
+                </div>
+                <div class="r1">
+                    <p>Los campos dentro del registro no permiten avanzar el proceso en caso de que el dato ingresado
+                        no cumpla con las características que cada uno solicita, en caso de que los datos esten correctos
+                        y no se procese la solicitud, se recomienda lo siguiente:
+                    </p>
+                    <h4>Alternativa 1</h4>
+                    <p>Verifica que tu conexión de internet permita la transferencia de datos, en caso de que la velocidad
+                        de tu servicio de internet no sea la optima, se recomienda posponer el registro hasta que su servico se
+                        haya regulado
+                    </p>
+                    <h4>Alternativa 2</h4>
+                    <p>Verifica que el campo <span>Acepto politicas y terminos de uso</span> este seleccionado, de lo contrario
+                        no se permitira continuar. <span>Importante, lee las politicas de privacidad y terminos de uso para el
+                        conocimiento de como manejamos tus datos dentro de la aplicación</span>
+                    </p>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="zona">
+                    <h3>No permite ingresar por error en algun campo</h3>
+                </div>
+                <div class="r1">
+                    <p>Los campos dentro del registro no aceptan ciertos formatos de caracteres,
+                        asi mismo solo se puede ingresar una cantidad de caracteres limitados,
+                        por lo que se recomienda lo siguiente:
+                    </p>
+                    <h4>Alternativa 1</h4>
+                    <p>Si el error esta en los campos <span>Nombre</span>, <span>Apellido Paterno</span>
+                        o <span>Apellido Materno</span>, verifica que no ingresaste caracteres especiales
+                        o numericos
+                    </p>
+                    <h4>Alternativa 2</h4>
+                    <p>Si el error esta en el campo <span>Email</span>, verifica que ingresaste el simbolo @ y que
+                        no hay espacios entre los caracteres.
+                    </p>
+                    <h4>Alternativa 3</h4>
+                    <p>A excepción de los campos <span>Email</span> y <span>Contraseña</span>, todos los restantes
+                        tienen un limite de caracteres que es mínimo 3 y máximo 5 caracteres, verifica que cada dato
+                        esta dentro del limite
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p>Con el inicio de sesión puedes acceder a la aplicación, esta se encuentra en la pagina de inicio Spektre, esta dividido
+            en tres secciones, una correspondiente a los profesores, otra a los alumnos y la ultima al administrador
+        </p>
+        <p>A continuación te presentamos los problemas que fueron detectados y te pueden
+            suceder al utilizar esta sección, sigue las alternativas que hay en cada uno de los casos
+            para solucionar tu problema, en caso de que este persista, contactanos
+         </p>
+    </section>
+
+    <!--Nueva problematica-->
+
+    <section class="np" id="np">
+        <h2>¿Tienes alguna nueva problematica?</h2>
+    </section>
+
+      <!--Footer-->
+
+      <footer class="footer">
+          <div class="container">
+              <div class="row">
+                  <div class="footer-col">
+                      <h4>Compañia</h4>
+                      <ul>
+                          <li><a href="#somos">Acerca de nosotros</a></li>
+                          <li><a routerLink="/auth/politics" >Politicas de privacidad</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h4>¿Necesitas ayuda?</h4>
+                      <ul>
+                          <li><a href="./ayuda.html">Centro de ayuda</a></li>
+                          <li><a href="./ayuda.html">Inicio de sesión</a></li>
+                          <li><a href="./ayuda.html">Status de solicitud</a></li>
+                          <li><a href="./ayuda.html">Otros problemas</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h4>Integrantes</h4>
+                      <ul>
+                          <li>arana chavez emiliano</li>
+                          <li>de la cruz fuentes diego</li>
+                          <li>lizarraga anguiano jesus adrian</li>
+                          <li>nuñez manrique cuauhtemoc emmanuel</li>
+                          <li>Ortiz Lorenzo Melissa Anaxiranny</li>
+                          <li>regalado zuñiga leonardo daniel</li>
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h4>Siguenos</h4>
+                      <div class="social-media">
+                          <ul>
+                              <li><p id=facebook><i class="fab fa-facebook"></i>facebook</p></li>
+                              <li><p id="instagram"><i class="fab fa-instagram"></i>Instagram</p></li>
+                              <li><p id="twitter"><i class="fab fa-twitter"></i>Twitter</p></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
+
+  </div>
+</div>

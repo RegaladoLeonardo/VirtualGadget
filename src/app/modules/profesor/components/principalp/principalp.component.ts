@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalpComponent implements OnInit {
 
+  public nombrePro = localStorage.getItem('usuario');
   constructor() { }
 
   ngOnInit(): void {

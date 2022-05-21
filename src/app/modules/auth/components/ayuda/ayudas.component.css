@@ -1,0 +1,190 @@
+
+header{
+  width: 100%;
+  background: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a{
+  font-weight: 700;
+  margin: 0 50px;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+}
+header span{
+  color: #4b7ae8;
+}
+.contenido{
+  background: #F3F7FA;
+  width: 100vw;
+  height: 94vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.saludo{
+  background: url(https://i.pinimg.com/originals/3d/08/e0/3d08e03cb40252526fee2036a67f07f1.gif);
+  background-size: 100% 100%;
+  width: 100vw;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.text{
+  margin-left: 10%;
+  max-width: 250px;
+}
+.saludo h3{
+  color: white;
+  margin-bottom: 20px;
+}
+.saludo h1{
+  color: white;
+  font-size: 48px;
+}
+.saludo h1 span{
+  color: #4b7ae8;
+}
+.bienvenida{
+  padding: 70px;
+}
+.bienvenida h3{
+  font-size: 24px;
+  color: rgb(10, 13, 47);
+  margin-bottom: 10px;
+}
+.bienvenida span{
+  color: #4b7ae8;
+}
+.bienvenida p{
+  text-align: justify;
+}
+.bienvenida .app{
+  text-align: center;
+  margin-top: 50px;
+}
+.Spektre{
+  background: #0B142E;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.Spektre h1{
+  font-size: 64px;
+  color: white;
+  text-align: center;
+}
+.Spektre img{
+  transition: all 0.3s ease-in-out;
+}
+.Spektre img:hover{
+  transform: scale(1.1);
+}
+.cuad{
+  background: url(../../../../../assets/img/cubosS.svg);
+  height: 150px;
+  margin-top: 15px;
+  background-repeat: repeat-x;
+}
+.cuad2{
+  background: url(../../../../../assets/img/cubosS.svg);
+  height: 150px;
+  transform: rotate(180deg);
+  background-repeat: repeat-x;
+}
+.ide{
+  margin: 35px;
+  text-align: center;
+  color: white;
+  font-size: 36px;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+.container .card{
+  position: relative;
+  width: 280px;
+  height: 400px;
+  margin: 30px;
+  box-shadow: 10px 10px 40px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+.card .algo{
+  position: absolute;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card .titu{
+  color: white;
+  font-size: 32px;
+  text-align: center;
+}
+.container .card .content{
+  padding: 20px;
+  text-align: center;
+  transition: 0.5s;
+  transform: translateY(90px);
+  opacity: 0;
+}
+.container .card:hover .content{
+  transform: translateY(0px);
+  opacity: 1;
+}
+.container .card:hover .algo{
+  transform: translateY(0px);
+  opacity: 0;
+}
+.container .card .content h2{
+  position: absolute;
+  top: -80px;
+  right: 30px;
+  font-size: 8em;
+  color: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+
+.container .card .content h3{
+  font-size: 1.8em;
+  color: #fff;
+  z-index: 1;
+}
+.container .card .content ul{
+  padding: 20px;
+  text-align: justify;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 300;
+}
+.container .card .content a{
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 15px;
+  background: #fff;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}

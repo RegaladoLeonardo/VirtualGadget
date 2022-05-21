@@ -314,13 +314,13 @@ header{
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 16px;
   letter-spacing: 1px;
-  color: rgb(21, 21, 21);
+  color: rgb(255, 255, 255);
   font-weight: 400;
   box-shadow: 0 5px 15px rgba(121, 1, 1, 0.05);
 }
 
 .form .inputBox input::placeholder{
-  color: #000000;
+  color: #a8a8a8;
 }
 .form .inputBox input[type="submit"]{
   background: white;
@@ -334,4 +334,7 @@ header{
   color: #3d6fdb;
   font-weight: 500;
   text-decoration: none;
+}
+.message-erro{
+  color: #f02121;
 }

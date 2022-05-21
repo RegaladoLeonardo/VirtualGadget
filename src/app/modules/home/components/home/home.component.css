@@ -1,14 +1,27 @@
 
 *{
+  transition: linear 0.1s all;
+  margin: 0;padding: 0;
   text-decoration: none;
+
+}
+
+.body{
+  background: url(../../../../../assets/img/FondoCiudad.png);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 header{
   position: fixed;
   top:0; left:0;
   width: 100%;
-  background: rgb(4, 19, 52);
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
-  padding: 1.5rem 9%;
+  padding: 20px 9%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,8 +33,8 @@ header{
 
 header .logo{
   font-weight: 600;
-  font-size: 24px;
-  color: var(--bluel);
+  font-size:18px;
+  color: #3d6fdb;
 }
 header .logo span{
   color: rgb(231, 231, 231);
@@ -33,9 +46,9 @@ header .navbar a{
   color: rgb(255, 255, 255);
 }
 header .navbar .spectre{
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin-left: 2rem;
-  color: rgb(202, 154, 99);
+  color: rgb(171, 138, 226);
 }
 header .navbar a:hover{
   color: var(--bluel);
@@ -53,198 +66,177 @@ header label{
   visibility: hidden;
   opacity: 0;
 }
-
-.Servicios .box-container .box .price{
-  font-size: 4rem;
-  color: #2a4c94;
-  margin: 10px;
+img{
+  width: 75px;
+  position: relative;
+  margin: 0 17%;
 }
-.Servicios .box-container .box .price span{
-  color: rgba(0, 0, 0, 0.507);
-  font-size: 2rem;
-}
-
-.Servicios .box-container .box .fas{
-  color: green;
-  font-size: 14px;
-}
-.Servicios .box-container .box li{
-  color: #00000079;
-  font-size: 14px;
-  margin: 20px;
-  font-weight: bold;
-}
-.Servicios .box-container .box:hover{
-  background-image: -moz-linear-gradient(to top, #7099f1, #ccdcff);
-  transform: scale(1.05);
-}
-.Servicios .box-container .box button{
-  color: #ffffff;
-  border-radius: 10px;
-  width: 170px;
-  padding: 10px;
-  background-color: #112653;
-  border: none;
-  transition: .2s linear;
-}
-.Servicios .box-container .box button:hover{
-  animation: onda 1000ms;
-  background-color: #2d59b6;
+.wrapper{
+  display: inline-flex;
+  margin-top: 25px;
+  font-weight: 600;
+  color: rgb(194, 194, 194);
 }
 
-/*Footer*/
-.footer{
-  margin-top: 100px;
-  padding: 70px 0;
-  background: rgb(4, 19, 52);
+.wrapper h3{
+  font-size: 24px;
 }
-.footer .container{
-  max-width: 1170px;
-  margin: auto;
+
+.box{
+  left: 0;
+  position: relative;
+  text-align: center;
 }
-.footer .container .row{
+.container{
+  margin-top: 10px;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-.footer .container .row .footer-col{
-  width: 25%;
-  padding: 0 15px;
+.box-2{
+  margin: 70px 25px;
 }
-.footer .container .row .footer-col h4{
-  color: #ffffff;
-  text-transform: capitalize;
-  font-size: 20px;
-  margin-bottom: 20px;
+.btn {
+  font-size: 16px;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+.btn-two {
   font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(33, 15, 67);
+  transition: all 0.5s;
   position: relative;
 }
-.footer .container .row .footer-col h4::before{
+.btn-two span {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.btn-two::before {
+  border-radius: 10px;
   content: '';
   position: absolute;
+  top: 0;
   left: 0;
-  bottom: -10px;
-  background-color: #e91e63;
-  height: 2px;
-  box-sizing: border-box;
-  width: 77px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  background-color: #D7DDED80;
 }
-.footer .container .row .footer-col ul li:not(:last-child){
-  margin-bottom: 10px;
+.btn-two::after {
+  border-radius: 10px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  background-color: #D7DDED80;
 }
-.footer .container .row .footer-col ul li{
-  font-size: 14px;
-  text-transform: capitalize;
-  color: #a8a8a8;
-  font-weight: 600;
-  color: #bbbbbb;
+.btn-two:hover::before {
+  transform: rotate(-25deg);
+  border: 3px solid rgba(97, 126, 255, 0.2);
+  background-color: rgba(97, 126, 255, 0.2);
+}
+.btn-two:hover::after {
+  transform: rotate(25deg);
+  background-color: #D7DDED80;
+}
+
+
+.btn-3 {
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(51, 25, 93);
+  transition: all 0.5s;
+  position: relative;
+}
+.btn-3 span {
+  z-index: 2;
   display: block;
-  transition: all 0.5s ease;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
-.footer .container .row .footer-col ul li a{
-  font-size: 14px;
-  text-transform: capitalize;
-  color: #a8a8a8;
-  font-weight: 600;
-  color: #bbbbbb;
-  display: block;
-  transition: all 0.5s ease;
+.btn-3::before {
+  border-radius: 10px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  background-color: #D7DDED80;
 }
-.footer .container .row .footer-col ul li a:hover{
-  color: #6eb9ff;
-  padding-left: 10px;
+.btn-3::after {
+  border-radius: 10px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  background-color: #D7DDED80;
 }
-.footer .container .row .footer-col ul li:hover{
-  color: #6eb9ff;
-  padding-left: 10px;
+.btn-3:hover::before {
+  transform: rotate(-25deg);
+  background-color: #D7DDED80;
 }
-.social-media .fa-facebook-square{
-  color: #3b5998;
-  padding-right: 10px;
-}
-.social-media .fa-facebook-square:hover{
-  color: #3469da;
-}
-.social-media .fa-instagram-square{
-  color: #9e40dd;
-  padding-right: 10px;
-}
-.social-media .fa-instagram-square:hover{
-  color: #b13bff;
-}
-.social-media .fa-twitter-square{
-  color: #00acee;
-  padding-right: 10px;
-}
-
-.social-media .fa-twitter-square:hover{
-  color: #46c4f7;
+.btn-3:hover::after {
+  transform: rotate(25deg);
+  border: 3px solid rgba(97,126,255,0.2);
+  background-color: rgba(97,126,255,0.2);
 }
 
-
-
-/*Ajuste de pantalla*/
-/*Barra de navegacion*/
-@media (max-width:768px){
-  header label{
-      visibility: visible;
-      opacity: 1;
-  }
-
-  header .navbar{
-      position: absolute;
-      top:100%; left: 0;
-      width: 100%;
-      background: rgb(4, 19, 52);
-      padding: 1rem 2rem;
-      border-top: .2rem solid rgba(0, 0, 0, 0.4);
-      box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
-      transform-origin: top;
-      transform: scaleY(0);
-      opacity: 0;
-      transition: .2s linear;
-  }
-  header .navbar a{
-      display: block;
-      margin: 2rem 0;
-      font-size: 2rem;
-  }
-  header .navbar .spectre{
-      display: block;
-      margin: 2rem 0;
-      font-size: 2rem;
-  }
-  header input:checked ~ .navbar{
-      transform: scaleY(1);
-      opacity: 1;
-  }
-
-  header input:checked ~ label::before{
-      content:'\f00d';
-  }
+h1{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #ffffff;
+  font-size: 84px;
 }
-/*Animacion onda*/
-@keyframes onda {
-  0%{
-      box-shadow: 0 0 0 0 #008cffc7;
-  }
+.dis{
+  margin-top: 30px;
+  color: #9b9b9b;
+  font-weight: 900;
+  font-size: 20px;
+}
+@keyframes slide{
   100%{
-      box-shadow: 0 0 16px 24px rgba(57, 132, 182, 0);
+      top: -240.5px;
   }
-
 }
-/*Bienvenida*/
-@media (max-width:750px){
-  .home img{
-      position: relative;
-      width: 70%;
+@keyframes typing{
+  100%{
+      left: 100%;
+      margin: 0 -35px 0 35px;
   }
-  .home .text{
-      position: relative;
-      font-size: 3.7em;
-      text-align: center;
-      color: rgb(17, 38, 83);
-      /*animacion entrada*/
-      animation: bounceInLeft;
-      animation-duration: 1s;
+}
+@keyframes fondo1{
+  0%, 100%{
+      background: #1c3783;
+  }
+  50%{
+      background: #572f85;
+  }
+}
+@keyframes fondo{
+  0%, 100%{
+      background: #572f85;
+  }
+  50%{
+      background: #1c3783;
   }
 }

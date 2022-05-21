@@ -34,7 +34,6 @@ export class HomeComponent implements OnDestroy{
 
   ngOnDestroy(): void {
     this.linkCss?.setAttribute('href', './assets/styles/default.css');
-    console.log('Soy el ondestroy');
   }
 
 }

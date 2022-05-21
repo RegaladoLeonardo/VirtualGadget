@@ -19,81 +19,124 @@
 -->
 
 <app-nabvarp></app-nabvarp>
+<section class="body">
+<section class="contenedor">
+      <section class="sidebar" id="sidebar">
+          <div class="sidebar-logo">
+              <img src="../../../../../assets/img/logo3.png" width="50%">
+              <a href="../index.html" class="logo"><span>Virtual</span>Gadget</a>
+          </div>
+          <div class="sidebar-menu">
+            <a routerLink=""><div class="boton">Inicio</div></a>
+            <a routerLink="/auth/singup"><div class="boton">Registro</div></a>
+            <a href="#alum"><div class="boton">Alumnos</div></a>
+            <a href="#prof"><div class="boton">Profesores</div></a>
+            <a href="#admin"><div class="boton">Administrador</div></a>
+          </div>
+      </section>
+      <div class="contenido">
+        <div class="cont" id="alum">
+          <div class="form">
+            <h2>Inicia Sesion Alumno</h2>
+            <form [formGroup]="form"
+            (ngSubmit)="onSubmit()">
+
+              <div class="inputBox">
+                <input formControlName="usuario" type="text" placeholder="Usuario">
+                <div *ngIf=" hasError('usuario') " class="message-error">
+                  <p class="message-erro"> Dato incorrecto </p>
+                </div>
+              </div>
+              <div class="inputBox">
+                <input formControlName="contraseña" type="password" placeholder="Contraseña">
+                <div *ngIf=" hasError('contraseña') " class="message-error">
+                  <p class="message-erro"> Dato incorrecto </p>
+                </div>
+              </div>
+              <div class="inputBox2">
+                <!--
+                <a href=".#"  routerLink="/alumno/inicio" ><button type="submit">Ingresar Alumno</button></a>
+                -->
+                <button class="button-cfe-full" type="submit" >Iniciar Sesion</button>
+
+              </div>
+
+              <p class="forget">¿No tienes una cuenta? <a routerLink="/auth/singup">Ingresa Aqui</a></p>
+
+            </form>
+          </div>
+        </div>
+        <div class="cont" id="prof">
+          <div class="form">
+            <h2>Inicia Sesion Profesor</h2>
+            <form [formGroup]="formp"
+            (ngSubmit)="onSubmitP()">
+
+              <div class="inputBox">
+                <input formControlName="usernamep" type="text" placeholder="Usuario">
+                <div *ngIf=" hasErrorP('usernamep') " class="message-error">
+                  <p class="message-erro"> Dato incorrecto </p>
+                </div>
+              </div>
+              <div class="inputBox">
+                <input formControlName="passwordp" type="password" placeholder="Contraseña">
+                <div *ngIf=" hasErrorP('passwordp') " class="message-error">
+                  <p class="message-erro"> Dato incorrecto </p>
+                </div>
+              </div>
+              <div class="inputBox2">
+                <!--
+                <a href=".#"  routerLink="/alumno/inicio" ><button type="submit">Ingresar Alumno</button></a>
+                -->
+                <button class="button-cfe-full" type="submit" >Iniciar Sesion</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+        <div class="cont"  id="admin">
+          <div class="form">
+            <h2>Inicia Sesion Administrador</h2>
+            <form [formGroup]="forma"
+            (ngSubmit)="onSubmitA()">
+
+              <div class="inputBox">
+                <input formControlName="usernamea" type="text" placeholder="Usuario">
+                <div *ngIf=" hasErrorP('usernamea') " class="message-error">
+                  <p class="message-erro"> Dato incorrecto </p>
+                </div>
+              </div>
+              <div class="inputBox">
+                <input formControlName="passworda" type="password" placeholder="Contraseña">
+                <div *ngIf=" hasErrorP('passworda') " class="message-error">
+                  <p class="message-erro"> Dato incorrecto </p>
+                </div>
+              </div>
+              <div class="inputBox2">
+                <!--
+                <a href=".#"  routerLink="/alumno/inicio" ><button type="submit">Ingresar Alumno</button></a>
+                -->
+                <button class="button-cfe-full" type="submit" >Iniciar Sesion</button>
+
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+</section>
 <section>
-  <div class="color"></div>
-  <div class="color"></div>
-  <div class="color"></div>
   <div class="box">
-    <div class="square" style="--i:0"></div>
-    <div class="square" style="--i:1"></div>
-    <div class="square" style="--i:2"></div>
-    <div class="square" style="--i:3"></div>
-    <div class="square" style="--i:4"></div>
-
-
     <div class="container">
 
-
-      <div class="form">
-        <h2>Inicia Sesion Alumno</h2>
-        <form [formGroup]="form"
-        (ngSubmit)="onSubmit()">
-
-          <div class="inputBox">
-            <input formControlName="usuario" type="text" placeholder="Usuario">
-            <div *ngIf=" hasError('usuario') " class="message-error">
-              <p class="message-erro"> Dato incorrecto </p>
-            </div>
-          </div>
-          <div class="inputBox">
-            <input formControlName="contraseña" type="password" placeholder="Contraseña">
-            <div *ngIf=" hasError('contraseña') " class="message-error">
-              <p class="message-erro"> Dato incorrecto </p>
-            </div>
-          </div>
-          <div class="inputBox2">
-            <!--
-            <a href=".#"  routerLink="/alumno/inicio" ><button type="submit">Ingresar Alumno</button></a>
-            -->
-            <button class="button-cfe-full" type="submit" >Iniciar Sesion</button>
-
-          </div>
-
-          <p class="forget">¿No tienes una cuenta? <a routerLink="/auth/singup">Ingresa Aqui</a></p>
-
-        </form>
-      </div>
 
     </div>
 
 
     <div class="container">
-      <div class="form">
-        <h2>Inicia Sesion Profesor</h2>
-        <form [formGroup]="formp"
-        (ngSubmit)="onSubmitP()">
 
-          <div class="inputBox">
-            <input formControlName="usernamep" type="text" placeholder="Usuario">
-            <div *ngIf=" hasErrorP('usernamep') " class="message-error">
-              <p class="message-erro"> Dato incorrecto </p>
-            </div>
-          </div>
-          <div class="inputBox">
-            <input formControlName="passwordp" type="password" placeholder="Contraseña">
-            <div *ngIf=" hasErrorP('passwordp') " class="message-error">
-              <p class="message-erro"> Dato incorrecto </p>
-            </div>
-          </div>
-          <div class="inputBox2">
-            <!--
-            <a href=".#"  routerLink="/alumno/inicio" ><button type="submit">Ingresar Alumno</button></a>
-            -->
-            <button class="button-cfe-full" type="submit" >Iniciar Sesion</button>
-          </div>
-
-        </form>
-      </div>
 
     </div>
 
@@ -101,33 +144,7 @@
 
 
     <div class="container">
-      <div class="form">
-        <h2>Inicia Sesion Administrador</h2>
-        <form [formGroup]="forma"
-        (ngSubmit)="onSubmitA()">
 
-          <div class="inputBox">
-            <input formControlName="usernamea" type="text" placeholder="Usuario">
-            <div *ngIf=" hasErrorP('usernamea') " class="message-error">
-              <p class="message-erro"> Dato incorrecto </p>
-            </div>
-          </div>
-          <div class="inputBox">
-            <input formControlName="passworda" type="password" placeholder="Contraseña">
-            <div *ngIf=" hasErrorP('passworda') " class="message-error">
-              <p class="message-erro"> Dato incorrecto </p>
-            </div>
-          </div>
-          <div class="inputBox2">
-            <!--
-            <a href=".#"  routerLink="/alumno/inicio" ><button type="submit">Ingresar Alumno</button></a>
-            -->
-            <button class="button-cfe-full" type="submit" >Iniciar Sesion</button>
-
-          </div>
-
-        </form>
-      </div>
       </div>
 
 

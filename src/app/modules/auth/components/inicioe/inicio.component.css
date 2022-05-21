@@ -1,0 +1,210 @@
+.somos .contenedor{
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.somos .contenedorTitulo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.somos .contenedorTitulo i{
+  font-size: 48px;
+}
+.somos .contenedor p{
+  text-align: justify;
+  margin: 45px;
+  transition: all 500ms ease;
+}
+.somos .contenedor p:hover,
+.somos img:hover{
+  transform: scale(1.1);
+}
+.cuad{
+  background: url(../../../../../assets/img/cuadradosGris.svg);
+  height: 150px;
+  background-repeat: repeat-x;
+}
+.cuad2{
+  background: url(../../../../../assets/img/cuadradosGris.svg);
+  height: 150px;
+  transform: rotate(180deg);
+  margin-top: 75px;
+  background-repeat: repeat-x;
+}
+.onda{
+  background: url(../../../../../assets/img/ondas.svg);
+  height: 100px;
+  background-repeat: repeat-x;
+  margin-top: 30px;
+}
+.onda2{
+  background: url(../../../../../assets/img/ondas.svg);
+  height: 100px;
+  background-repeat: repeat-x;
+  transform: rotate(180deg);
+}
+/*Tres contenedores*/
+.tres{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tres .container{
+  width: 25%;
+  margin: 50px;
+  text-align: center;
+  color: white;
+}
+.tres .container i{
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+.tres .container img{
+  width: 70%;
+  margin-top: 20px;
+  transition: all 500ms ease;
+}
+.tres .container img:hover{
+  transform: scale(1.1);
+}
+.tres .container p{
+  text-align: justify;
+}
+/*filosofía*/
+.filosofia{
+  background: rgba(255, 255, 255, 0.125);
+  text-align: center;
+  margin: 50px 0;
+  color: white;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filosofia .caja h3{
+  margin: 25px;
+}
+
+.filosofia .caja img{
+  width: 30%;
+  margin: 25px;
+  transition: all 500ms ease;
+}
+.filosofia .caja img:hover{
+  transform: scale(1.1);
+}
+.politicas{
+  color: white;
+  margin: 50px 0;
+}
+.politicas h3{
+  text-align: center;
+  margin: 10px;
+  padding-bottom: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.politicas .contenedorTitulo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.politicas .contenedorTitulo i{
+  font-size: 40px;
+}
+.politicas .cont{
+  margin: 15px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.politicas .cont .cajaTxt{
+  padding: 30px;
+  text-align: center;
+}
+.politicas .cont .cajaTxt img{
+  margin-top: 20px;
+  transition: all 500ms ease;
+}
+.politicas .cont .cajaTxt img:hover{
+  transform: scale(1.1);
+}
+.politicas .cont .cajaTxt ul{
+  text-align: justify;
+}
+.card{
+  position: relative;
+  width: 350px;
+  height: 190px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+.filosofia .caja img{
+  width: 30%;
+  margin: 25px;
+  transition: all 500ms ease;
+}
+.filosofia .caja img:hover{
+  transform: scale(1.1);
+}
+.politicas{
+  color: white;
+  margin: 50px 0;
+}
+.politicas h3{
+  text-align: center;
+  margin: 10px;
+  padding-bottom: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.politicas .contenedorTitulo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .container .row .footer-col ul li a{
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #a8a8a8;
+  font-weight: 600;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.5s ease;
+}
+.footer .container .row .footer-col ul li a:hover{
+  color: #6eb9ff;
+  padding-left: 10px;
+}
+.footer .container .row .footer-col ul li:hover{
+  color: #6eb9ff;
+  padding-left: 10px;
+}
+.social-media .fa-facebook{
+  color: #3b5998;
+  padding-right: 10px;
+}
+.social-media .fa-facebook:hover{
+  color: #3469da;
+}
+.social-media .fa-instagram{
+  color: #9e40dd;
+  padding-right: 10px;
+}
+.social-media .fa-instagram:hover{
+  color: #b13bff;
+}
+.social-media .fa-twitter{
+  color: #00acee;
+  padding-right: 10px;
+}
+
+.social-media .fa-twitter:hover{
+  color: #46c4f7;
+}

@@ -11,7 +11,7 @@ import { StutorialComponent } from './components/stutorial/stutorial.component';
 import { ChatAComponent } from './components/chat-a/chat-a.component';
 import { EscenariosaComponent } from './components/escenariosa/escenariosa.component';
 import { CuestionariosaComponent } from './components/cuestionariosa/cuestionariosa.component';
-
+import { BibliotecaComponent} from './components/biblioteca/biblioteca.component';
 const inicioRoutes: Routes = [
   { path: 'inicio', component: PrincipalComponent, pathMatch: 'full' },
   { path: 'tutorial', component: TutorialComponent, pathMatch: 'full' },
@@ -20,7 +20,8 @@ const inicioRoutes: Routes = [
   { path: 'tuto2', component:  StutorialComponent, pathMatch: 'full' },
   { path: 'chat', component:  ChatAComponent, pathMatch: 'full' },
   { path: 'escenariosA', component:  EscenariosaComponent, pathMatch: 'full' },
-  { path: 'cuestionariosA', component:  CuestionariosaComponent, pathMatch: 'full' }
+  { path: 'cuestionariosA', component:  CuestionariosaComponent, pathMatch: 'full' },
+  { path: 'bibliotecaA', component:  BibliotecaComponent, pathMatch: 'full' },
 
 
 ];
