@@ -10,7 +10,7 @@ export class CuestionariopComponent implements OnInit {
 
   private id_profe = localStorage.getItem('id_profe');
 
-  url: string = 'https://cuestioonarios.herokuapp.com/profesor/gestioncuestionarios?profesor'+ this.id_profe;
+  url: string = 'https://si-production-7993.up.railway.app/profesor/gestioncuestionarios?profesor='+ this.id_profe;
   // https://cuestioonarios.herokuapp.com/profesor/gestioncuestionarios
   constructor() { }
 

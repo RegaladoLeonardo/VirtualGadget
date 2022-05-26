@@ -9,7 +9,8 @@ export class CuestionariosaComponent implements OnInit {
 
   private name = localStorage.getItem('id');
 
-  url: string = 'https://si-production-7993.up.railway.app/usuario/gestioncuestionarios?usuid='+ this.name; //+ this.name;
+  url: string = 'https://si-production-7993.up.railway.app/usuario/gestioncuestionarios?idusu='+ this.name; //+ this.name;
+
 
   public linkCss: Element | null
   constructor() {

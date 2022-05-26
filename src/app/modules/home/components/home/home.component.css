@@ -29,6 +29,7 @@ header{
   animation: slideInDown;
   animation-duration: 0.5s;
   transition: all 500ms ease;
+
 }
 
 header .logo{
