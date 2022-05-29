@@ -1,21 +1,22 @@
 
 
 .sidebar-heading{
-  background-color: #0b1f46 !important;
+  background-color: #0B142E !important;
 }
 .sidebar-heading h3{
-  font-size: 3rem;
+  text-align: center;
+  font-size: 2rem;
   color: #ffffff;
-  text-align: left;
   margin-top: 60px;
   padding-left: 10px;
+  font-weight: 600;
 }
 
 
 .sidebar-heading h2{
+  text-align: center;
   font-size: 2rem;
   color: #ffffff;
-  text-align: left;
   padding-left: 10px;
 }
 .head{
@@ -43,16 +44,16 @@
 
 .act{
   color: #ffffff;
-  background-color: rgb(25, 50, 97) !important;
+  background-color: #0B142E !important;
 }
 
 .white{
-  background-color: #0b1f46 !important;
+  background-color: #0B142E !important;
 }
 .list-group{
   margin-top: 50px;
   max-width:250px;
-  background-color: rgb(25, 50, 97) !important;
+  background-color: #0B142E !important;
 }
 .list-group-item{
   margin-top: 15px;
@@ -65,18 +66,18 @@
 }
 
 a{
-  background-color: rgb(25, 50, 97) !important;
+  text-align: center;
+  background-color: #0B142E !important;
   color: #ffffff;
   font-weight: 44px;
   font-size:21px;
 }
 
 a:hover{
-  color: #206dc5;
-  padding-left: 10px;
-  margin-left: 10px;
+  color: #a6cfff;
 }
 
 a:focus{
-  background-color: #3256ce !important;
+  background-color: #0B142E !important;
 }
+

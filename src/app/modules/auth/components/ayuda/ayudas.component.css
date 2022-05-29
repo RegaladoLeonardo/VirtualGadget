@@ -73,6 +73,8 @@ header span{
   flex-flow: column;
 }
 .Spektre h1{
+  font-weight: 550;
+  margin-top: 36px;
   font-size: 64px;
   color: white;
   text-align: center;
